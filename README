@@ -16,6 +16,8 @@ Structure of Directories is as is:
      -->Additional.xqm : where you should put you stuff
          --> static : where we put all our static things such ass additonal editors (tinymce) and CSS 
 
+
+
 IsilexLite is available under License GPL v3. By downloading IsilexLite, You agree with conditions of License GPL v3.
 
 #HowTo Start my Server
