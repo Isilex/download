@@ -1,0 +1,165 @@
+/*(:
+: IsilexLight is a Light CMS and XML Collaborative XML Databases Tool for managers.
+: Copyright (C) 2016 Xavier-Laurent Salvador (85%) et Sylvain Chea (15%)
+: This file "header.css" is part of IsilexLight.
+: IsilexLight is free software: you can redistribute it and/or modify
+: it under the terms of the GNU General Public License as published by
+: the Free Software Foundation, either version 3 of the License, or
+: (at your option) any later version.
+: IsilexLight is distributed in the hope that it will be useful,
+: but WITHOUT ANY WARRANTY; without even the implied warranty of
+: MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+: GNU General Public License for more details.
+: You should have received a copy of the GNU General Public License
+: along with IsilexLight. If not, see <http://www.gnu.org/licenses/>.
+:)
+*/ 
+#alphabet{
+	font-family: "Impact", Charcoal, sans-serif;
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	font-size:11px;
+	text-align:justify;
+	color:white;
+	width : 240px;
+	padding-left:0px;
+	overflow-y: scroll;
+	z-index: 2000;
+	}
+
+#hautcote{
+
+	}
+#headerIsiPhp{
+
+	}
+#idefx{
+	width: 190px; 
+	background-color: rgba(255,255,255,0.6); 
+	text-align:left; padding: 7px;  
+	border: 1px solid #aaa;	 
+	border-radius: 3px;	 
+	box-shadow: inset 0 1px 7px rgba(0, 0, 0, 0.1);	 
+	}
+#idefx:focus	{
+	outline: none;	
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+	}
+#labelSwitch {
+	position: absolute;
+	top: 80px;
+	color: black;
+	font-size: xx-small;
+}
+#labelSwitchLbl {
+	position: absolute;
+	margin-top: -40px;
+	background-color: white;
+	width: 150px;
+	padding: 10px;
+	padding-left: 35px;
+	border-radius: 20px;
+	border: 2px solid #8000ff;
+}
+#labelSwitchLbl:hover {
+	border: 2px solid #ff0008;
+}
+#menu_haut {
+	width: 100%;
+	height: 55px;
+	position: fixed;
+	z-index:100;
+	top:0px;
+	left:0px;
+	display: block;
+	  background: #68849C;
+	-webkit-box-shadow:0px 1px 10px #CACACA;
+    -moz-box-shadow:0px 1px 10px #CACACA;
+    box-shadow:0px 1px 10px #CACACA; 
+	}
+#titrepos1{
+	font-family: 'Source Sans Pro', cursive;
+	color:#BDA663;
+	color:white;
+	color:#a98f4f;
+	font-size:30px;
+	padding-left:30px;
+	padding-bottom: 0px;
+	margin-left:20px;
+    width:85%;
+	border-bottom-right-radius: 30px;
+	text-shadow: -3px 3px 0px rgba(230, 159, 16, 1);
+	text-shadow: -3px 5px 0px rgba(255, 255, 255, 1);
+	}
+#top{
+	/*La zone du titre et de l'alphabet*/
+	padding: 80px;
+	padding-left: 40%;
+	padding-bottom: 60px;
+	background-size: 100%;
+	font-size: 8em;
+	color: #f7f4e7;
+	background: white url(/static/images/book-textbook.jpg) no-repeat left top;
+	 -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  	background-size: cover;
+  	font-family: huffington-icons;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	color: black;
+	}
+#topcahier{
+
+	}
+#xx {
+	/*La zone de chaque lettre cliquable*/
+	float: left; 
+	text-align:justify;
+	color:#507299;	
+	padding:2px;
+}
+#xx>a {
+	/*Dans la zone, la lettre cliquable*/
+  background-image: -webkit-linear-gradient(top, #ff8000, #85430d);
+  background-image: -moz-linear-gradient(top, #ff8000, #85430d);
+  background-image: -ms-linear-gradient(top, #ff8000, #85430d);
+  background-image: -o-linear-gradient(top, #ff8000, #85430d);
+  background-image: linear-gradient(to bottom, #ff8000, #85430d);
+  -webkit-box-shadow: -2px 1px 3px #666666;
+  -moz-box-shadow: -2px 1px 3px #666666;
+  box-shadow: -2px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 0.9em;
+    background: #68849C;
+  padding: 3px 5px 3px 5px;
+  text-decoration: none;
+  width: 27px;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+	}
+#xx>a:hover{
+     transform:scale(1.2);
+    -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+  background: #dedede;
+  background-image: -webkit-linear-gradient(top, #dedede, #707070);
+  background-image: -moz-linear-gradient(top, #dedede, #707070);
+  background-image: -ms-linear-gradient(top, #dedede, #707070);
+  background-image: -o-linear-gradient(top, #dedede, #707070);
+  background-image: linear-gradient(to bottom, #dedede, #707070);
+}
+#xx a:active {
+	/*Quand on clique sur la lettre*/
+	background-color:white;
+    border-radius: 10px;
+}
+#xx a:not(:active){
+
+}

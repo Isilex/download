@@ -1,0 +1,200 @@
+01:06:46.612	46.174.191.28:32744	admin	401	Basic authentication expected.	106.79 ms
+01:54:12.234	191.179.201.56:54279	admin	401	Basic authentication expected.	105.01 ms
+01:54:12.970	191.179.201.56:54282	admin	401	Basic authentication expected.	210.45 ms
+01:54:13.904	191.179.201.56:54284	admin	401	Basic authentication expected.	405.8 ms
+01:54:15.307	191.179.201.56:54287	admin	401	Basic authentication expected.	829.96 ms
+03:14:43.274	46.174.191.30:32744	admin	401	Basic authentication expected.	402.76 ms
+03:36:43.424	185.110.132.239:59456	admin	401	Basic authentication expected.	101.35 ms
+05:50:13.030	104.238.191.77:60000	admin	401	Basic authentication expected.	105.95 ms
+05:54:04.498	91.236.75.4:53109	admin	401	Basic authentication expected.	100.68 ms
+06:10:19.666	139.162.79.87:47050	admin	401	Basic authentication expected.	101.96 ms
+06:57:54.382	2.13.143.116:40589	admin	401	Basic authentication expected.	100.65 ms
+07:00:34.754	45.76.137.89:60000	admin	401	Basic authentication expected.	102.61 ms
+08:35:36.302	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/
+08:35:36.729	0:0:0:0:0:0:0:1:58544	admin	200		427.32 ms
+08:35:36.732	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/accueil
+08:35:36.748	0:0:0:0:0:0:0:1:58544	admin	200		16.62 ms
+08:35:36.751	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+08:35:38.494	0:0:0:0:0:0:0:1:58544	admin	200		1742.87 ms
+08:35:42.897	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/categories
+08:35:43.704	0:0:0:0:0:0:0:1:58544	admin	200		806.58 ms
+08:35:56.939	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/page/IsiCorpus
+08:35:57.138	0:0:0:0:0:0:0:1:58544	admin	200		198.49 ms
+08:35:58.863	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/login
+08:35:59.017	0:0:0:0:0:0:0:1:58544	admin	200		154.3 ms
+08:36:01.539	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/accueil
+08:36:01.558	0:0:0:0:0:0:0:1:58544	admin	200		18.86 ms
+08:36:01.561	0:0:0:0:0:0:0:1:58544	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+08:36:01.720	0:0:0:0:0:0:0:1:58544	admin	200		159.67 ms
+08:45:05.671	46.174.191.29:32744	admin	401	Basic authentication expected.	103.93 ms
+09:09:22.475	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/login
+09:09:22.677	0:0:0:0:0:0:0:1:56241	admin	200		201.72 ms
+09:09:29.155	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/accueil
+09:09:29.171	0:0:0:0:0:0:0:1:56241	admin	200		16.42 ms
+09:09:29.174	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:09:29.373	0:0:0:0:0:0:0:1:56241	admin	200		199.93 ms
+09:09:31.667	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[POST] http://localhost:8984/change-lang
+09:09:31.717	0:0:0:0:0:0:0:1:56241	admin	200		50.17 ms
+09:09:31.720	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:09:31.879	0:0:0:0:0:0:0:1:56241	admin	200		158.79 ms
+09:09:55.018	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/accueil
+09:09:55.034	0:0:0:0:0:0:0:1:56241	admin	200		16.19 ms
+09:09:55.037	0:0:0:0:0:0:0:1:56241	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:09:55.236	0:0:0:0:0:0:0:1:56241	admin	200		199.07 ms
+09:16:14.575	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/rubrique/G/1
+09:16:15.862	0:0:0:0:0:0:0:1:62684	admin	200		1286.94 ms
+09:16:17.196	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/fiche/7029
+09:16:17.423	0:0:0:0:0:0:0:1:62684	admin	200		227.34 ms
+09:16:19.412	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/rubrique/W/1
+09:16:19.949	0:0:0:0:0:0:0:1:62684	admin	200		537.94 ms
+09:16:21.741	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/rubrique/Q/1
+09:16:22.287	0:0:0:0:0:0:0:1:62684	admin	200		546.24 ms
+09:16:23.237	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/fiche/838
+09:16:23.416	0:0:0:0:0:0:0:1:62684	admin	200		179.22 ms
+09:16:27.399	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/accueil
+09:16:27.415	0:0:0:0:0:0:0:1:62684	admin	200		16.08 ms
+09:16:27.418	0:0:0:0:0:0:0:1:62684	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:16:27.576	0:0:0:0:0:0:0:1:62684	admin	200		158.34 ms
+09:34:19.558	0:0:0:0:0:0:0:1:63548	admin	REQUEST	[GET] http://localhost:8984/rubrique/V/1
+09:34:23.231	0:0:0:0:0:0:0:1:63548	admin	200		3673.79 ms
+09:34:26.794	0:0:0:0:0:0:0:1:63548	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:34:52.938	0:0:0:0:0:0:0:1:64059	admin	REQUEST	[GET] http://localhost:8984/accueil
+09:34:52.960	0:0:0:0:0:0:0:1:64059	admin	200		21.82 ms
+09:34:52.962	0:0:0:0:0:0:0:1:64059	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:34:53.257	0:0:0:0:0:0:0:1:64059	admin	200		294.98 ms
+09:34:56.875	0:0:0:0:0:0:0:1:64059	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:35:06.393	0:0:0:0:0:0:0:1:64277	admin	REQUEST	[GET] http://localhost:8984/rubrique/F/1
+09:35:07.473	0:0:0:0:0:0:0:1:64277	admin	200		1080.23 ms
+09:35:08.878	0:0:0:0:0:0:0:1:64277	admin	REQUEST	[GET] http://localhost:8984/rubrique/V/1
+09:35:09.997	0:0:0:0:0:0:0:1:64277	admin	200		1119.87 ms
+09:35:12.786	0:0:0:0:0:0:0:1:64277	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:35:31.491	0:0:0:0:0:0:0:1:64676	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:35:39.841	0:0:0:0:0:0:0:1:64807	admin	401	Basic authentication expected.	100.5 ms
+09:35:45.536	0:0:0:0:0:0:0:1:64807	admin	REQUEST	[GET] http://localhost:8984/rubrique/V/1
+09:35:46.897	0:0:0:0:0:0:0:1:64807	admin	200		1360.69 ms
+09:35:51.381	0:0:0:0:0:0:0:1:64807	admin	401	Basic authentication expected.	103.78 ms
+09:35:51.383	0:0:0:0:0:0:0:1:64807	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:37:48.607	0:0:0:0:0:0:0:1:63548	admin	400	org.eclipse.jetty.io.EofException	201821.87 ms
+09:37:48.907	0:0:0:0:0:0:0:1:63548	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	299.93 ms
+09:38:21.165	0:0:0:0:0:0:0:1:64059	admin	400	org.eclipse.jetty.io.EofException	204299.71 ms
+09:38:21.166	0:0:0:0:0:0:0:1:64059	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.14 ms
+09:38:38.742	0:0:0:0:0:0:0:1:64277	admin	400	org.eclipse.jetty.io.EofException	205965.88 ms
+09:38:38.742	0:0:0:0:0:0:0:1:64277	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.08 ms
+09:38:42.120	0:0:0:0:0:0:0:1:51324	admin	REQUEST	[GET] http://localhost:8984/rubrique/V/1
+09:38:43.482	0:0:0:0:0:0:0:1:51324	admin	200		1362.12 ms
+09:38:48.949	0:0:0:0:0:0:0:1:51324	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:39:01.546	0:0:0:0:0:0:0:1:64676	admin	400	org.eclipse.jetty.io.EofException	210065.22 ms
+09:39:01.546	0:0:0:0:0:0:0:1:64676	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.13 ms
+09:39:20.758	0:0:0:0:0:0:0:1:64807	admin	400	org.eclipse.jetty.io.EofException	209384.91 ms
+09:39:20.777	0:0:0:0:0:0:0:1:64807	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	19.37 ms
+09:41:55.101	0:0:0:0:0:0:0:1:51324	admin	400	org.eclipse.jetty.io.EofException	186160.73 ms
+09:41:55.396	0:0:0:0:0:0:0:1:51324	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	295.14 ms
+09:42:47.343	185.40.4.109:49360	admin	401	Basic authentication expected.	101.68 ms
+09:42:47.546	185.40.4.109:49370	admin	401	Basic authentication expected.	296.68 ms
+09:44:45.191	0:0:0:0:0:0:0:1:57173	admin	REQUEST	[GET] http://localhost:8984/
+09:44:45.552	0:0:0:0:0:0:0:1:57173	admin	200		361.71 ms
+09:44:45.555	0:0:0:0:0:0:0:1:57173	admin	REQUEST	[GET] http://localhost:8984/accueil
+09:44:45.571	0:0:0:0:0:0:0:1:57173	admin	200		16.43 ms
+09:44:45.574	0:0:0:0:0:0:0:1:57173	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+09:44:45.883	0:0:0:0:0:0:0:1:57173	admin	200		309.29 ms
+09:44:48.252	0:0:0:0:0:0:0:1:57173	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:45:42.182	0:0:0:0:0:0:0:1:58062	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:45:50.205	0:0:0:0:0:0:0:1:58179	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:45:51.306	0:0:0:0:0:0:0:1:58196	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:45:52.245	0:0:0:0:0:0:0:1:58215	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:45:54.178	0:0:0:0:0:0:0:1:58252	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:46:07.294	0:0:0:0:0:0:0:1:58455	admin	REQUEST	[GET] http://localhost:8984/rubrique/P/1
+09:46:09.055	0:0:0:0:0:0:0:1:58455	admin	200		1760.62 ms
+09:46:11.329	0:0:0:0:0:0:0:1:58455	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:46:11.769	0:0:0:0:0:0:0:1:58455	admin	200		439.86 ms
+09:48:23.520	0:0:0:0:0:0:0:1:57173	admin	400	org.eclipse.jetty.io.EofException	215278.49 ms
+09:48:23.520	0:0:0:0:0:0:0:1:57173	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.12 ms
+09:49:24.588	0:0:0:0:0:0:0:1:58252	admin	200		210419.98 ms
+09:49:24.861	0:0:0:0:0:0:0:1:58062	admin	400	org.eclipse.jetty.io.EofException	222689.45 ms
+09:49:24.861	0:0:0:0:0:0:0:1:58062	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.14 ms
+09:49:25.686	0:0:0:0:0:0:0:1:58196	admin	400	org.eclipse.jetty.io.EofException	214390.15 ms
+09:49:25.686	0:0:0:0:0:0:0:1:58196	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.1 ms
+09:49:38.120	0:0:0:0:0:0:0:1:58252	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:49:38.121	0:0:0:0:0:0:0:1:58252	admin	400	Stopped at /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/idefx.xqm, 4/68: [XQST0059] Module not found: http://www.projetGordes.fr/isi-repo.	1.49 ms
+09:49:49.893	0:0:0:0:0:0:0:1:58179	admin	400	org.eclipse.jetty.io.EofException	239699.59 ms
+09:49:49.893	0:0:0:0:0:0:0:1:58179	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.09 ms
+09:50:24.793	0:0:0:0:0:0:0:1:62552	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:50:24.802	0:0:0:0:0:0:0:1:62552	admin	400	Stopped at /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/fullLiteC.xqm, 1/2310: [bxerr:BASX0003] Path "/idefx" assigned to several functions: /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/fullLiteC.xqm, 1/2310 /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/idefx.xqm, 24/11	9.23 ms
+09:50:46.529	0:0:0:0:0:0:0:1:58215	admin	400	org.eclipse.jetty.io.EofException	294297.65 ms
+09:50:46.529	0:0:0:0:0:0:0:1:58215	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.09 ms
+09:50:49.878	0:0:0:0:0:0:0:1:62552	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:53:12.602	0:0:0:0:0:0:0:1:65186	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:53:12.913	0:0:0:0:0:0:0:1:65186	admin	200		311.07 ms
+09:53:15.123	0:0:0:0:0:0:0:1:65186	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:53:15.285	0:0:0:0:0:0:0:1:65186	admin	400	Stopped at /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/idefx.xqm, 31/24: [XPDY0002] root(): no context value bound. Stack Trace: - /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/idefx.xqm, 24/11	161.69 ms
+09:53:29.104	0:0:0:0:0:0:0:1:65186	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:53:29.415	0:0:0:0:0:0:0:1:65186	admin	200		310.41 ms
+09:53:31.428	0:0:0:0:0:0:0:1:65186	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:53:33.416	0:0:0:0:0:0:0:1:65186	admin	200		1988.31 ms
+09:53:55.581	0:0:0:0:0:0:0:1:62552	admin	400	org.eclipse.jetty.io.EofException	185712.11 ms
+09:53:55.581	0:0:0:0:0:0:0:1:62552	admin	500	Code: 400, Info: org.eclipse.jetty.io.EofException, Error: java.lang.IllegalStateException: Committed	0.08 ms
+09:54:57.475	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:54:57.714	0:0:0:0:0:0:0:1:50554	admin	200		239.28 ms
+09:54:59.905	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:55:01.660	0:0:0:0:0:0:0:1:50554	admin	200		1755.29 ms
+09:55:34.558	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:55:34.774	0:0:0:0:0:0:0:1:50554	admin	200		216.43 ms
+09:55:38.036	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:55:39.765	0:0:0:0:0:0:0:1:50554	admin	200		1729.89 ms
+09:56:20.792	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:56:21.007	0:0:0:0:0:0:0:1:50554	admin	200		215.13 ms
+09:56:24.523	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:56:26.308	0:0:0:0:0:0:0:1:50554	admin	200		1784.9 ms
+09:56:28.050	61.158.162.120:1053	admin	401	Basic authentication expected.	100.37 ms
+09:56:47.073	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:56:47.284	0:0:0:0:0:0:0:1:50554	admin	200		211.14 ms
+09:56:49.560	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:56:51.233	0:0:0:0:0:0:0:1:50554	admin	200		1672.95 ms
+09:57:19.524	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:57:21.250	0:0:0:0:0:0:0:1:50554	admin	200		1725.97 ms
+09:57:34.417	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:57:34.628	0:0:0:0:0:0:0:1:50554	admin	200		211.7 ms
+09:57:37.005	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:57:38.681	0:0:0:0:0:0:0:1:50554	admin	200		1676.26 ms
+09:57:55.349	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:57:55.567	0:0:0:0:0:0:0:1:50554	admin	200		217.74 ms
+09:57:57.686	0:0:0:0:0:0:0:1:50554	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:57:59.365	0:0:0:0:0:0:0:1:50554	admin	200		1679.89 ms
+09:58:50.000	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:58:50.286	0:0:0:0:0:0:0:1:54253	admin	200		286.33 ms
+09:58:52.555	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:58:54.233	0:0:0:0:0:0:0:1:54253	admin	200		1678.83 ms
+09:59:16.922	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:59:17.138	0:0:0:0:0:0:0:1:54253	admin	200		216.15 ms
+09:59:19.340	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:59:21.024	0:0:0:0:0:0:0:1:54253	admin	200		1684.38 ms
+09:59:42.079	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[GET] http://localhost:8984/fiche/835
+09:59:42.296	0:0:0:0:0:0:0:1:54253	admin	200		217.98 ms
+09:59:44.617	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+09:59:46.332	0:0:0:0:0:0:0:1:54253	admin	200		1715.24 ms
+10:00:04.211	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:00:05.918	0:0:0:0:0:0:0:1:54253	admin	200		1707.32 ms
+10:00:14.604	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:00:16.313	0:0:0:0:0:0:0:1:54253	admin	200		1709.27 ms
+10:00:35.540	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:00:37.164	0:0:0:0:0:0:0:1:54253	admin	400	Stopped at /Volumes/OrangeIsTheNewBlack/Isilex/CREAL_ISILEX_8.6/IsilexCreal/webapp/idefx.xqm, 31/210: [XPTY0004] Cannot cast xs:integer to xs:string: 50.	1624.65 ms
+10:00:49.859	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:00:51.565	0:0:0:0:0:0:0:1:54253	admin	200		1706.51 ms
+10:01:13.714	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:01:15.436	0:0:0:0:0:0:0:1:54253	admin	200		1722.43 ms
+10:01:26.084	0:0:0:0:0:0:0:1:54253	admin	REQUEST	[POST] http://localhost:8984/idefx
+10:01:27.976	0:0:0:0:0:0:0:1:54253	admin	200		1892.52 ms
+10:08:16.323	SERVER	admin	OK	Server was started (port: 1984).
+10:08:16.379	SERVER	admin	OK	HTTP Server was started (port: 8984).
+10:08:18.667	0:0:0:0:0:0:0:1:63184	admin	REQUEST	[GET] http://localhost:8984/
+10:08:19.407	0:0:0:0:0:0:0:1:63184	admin	200		742.67 ms
+10:08:19.411	0:0:0:0:0:0:0:1:63184	admin	REQUEST	[GET] http://localhost:8984/accueil
+10:08:19.462	0:0:0:0:0:0:0:1:63184	admin	200		50.94 ms
+10:08:19.465	0:0:0:0:0:0:0:1:63184	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+10:08:19.921	0:0:0:0:0:0:0:1:63184	admin	200		456.55 ms
+10:08:21.144	0:0:0:0:0:0:0:1:63184	admin	REQUEST	[GET] http://localhost:8984/rubrique/A/1
+10:08:21.263	0:0:0:0:0:0:0:1:63184	admin	200		118.73 ms
+10:08:22.855	0:0:0:0:0:0:0:1:63184	admin	REQUEST	[GET] http://localhost:8984/rubrique/B/1
+10:08:22.965	0:0:0:0:0:0:0:1:63184	admin	200		110.59 ms
+10:08:25.992	SERVER	admin	OK	HTTP Server was stopped (port: 8984).
+10:08:25.993	SERVER	admin	OK	Server was stopped (port: 1984).

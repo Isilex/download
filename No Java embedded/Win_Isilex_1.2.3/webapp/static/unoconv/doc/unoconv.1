@@ -1,0 +1,1321 @@
+'\" t
+.\"     Title: unoconv
+.\"    Author: Dag Wieers <dag@wieers.com>
+.\" Generator: DocBook XSL Stylesheets v1.75.2 <http://docbook.sf.net/>
+.\"      Date: 20 october 2010
+.\"    Manual: \ \&
+.\"    Source: \ \& 0.4
+.\"  Language: English
+.\"
+.TH "UNOCONV" "1" "20 october 2010" "\ \& 0\&.4" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+unoconv \- convert any document from and to any LibreOffice supported format
+.SH "SYNOPSIS"
+.sp
+\fIunoconv\fR [options] file [file2 \&.\&.]
+.sp
+\fIunoconv\fR \-\-listener [\-\-server SRV] [\-\-port PRT] [\-\-connection CON]
+.SH "DESCRIPTION"
+.sp
+unoconv is a command line utility that can convert any file format that LibreOffice can import, to any file format that LibreOffice is capable of exporting\&.
+.sp
+unoconv uses the LibreOffice\(cqs UNO bindings for non\-interactive conversion of documents and therefore needs an LibreOffice instance to communicate with\&. Therefore if it cannot find one, it will start its own instance for temporary usage\&. If desired, one can start a \(lqlistener\(rq instance to use for subsequent connections or even for remote connections\&.
+.SH "OPTIONS"
+.PP
+\-c, \-\-connection
+.RS 4
+UNO connection string to be used by the client to connect to an LibreOffice instance, or used by the listener to make LibreOffice listen\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Default connection string is "socket,host=localhost,port=2002;urp;StarOffice\&.ComponentContext"
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-d, \-\-doctype
+.RS 4
+Specify the LibreOffice document type of the backend format\&. Possible document types are:
+\fIdocument\fR,
+\fIgraphics\fR,
+\fIpresentation\fR,
+\fIspreadsheet\fR\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Default document type is \'document\'\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-e, \-\-export
+.RS 4
+Set specific export filter options (related to the used LibreOffice filter)\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+eg\&. for the PDF output filter one can specify: \-e PageRange=1\-2
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+See the *EXPORT FILTERS* section\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-f, \-\-format
+.RS 4
+Specify the output format for the document\&. You can get a list of possible output formats per document type by using the
+\-\-show
+option\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Default document type is \'pdf\'\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-F, \-\-field
+.RS 4
+Add or replace user\-defined text field with value
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+eg\&. \-F Client_Name="Oracle"
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-i, \-\-import
+.RS 4
+Set specific import filters options (related to the used LibreOffice import filter based on the input filename)\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+See the *IMPORT FILTERS* section\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-l, \-\-listener
+.RS 4
+Start unoconv as listener for unoconv clients to connect to\&.
+.RE
+.PP
+\-M, \-\-meta
+.RS 4
+Add or replace document metadata with value
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+eg\&. \-M Author="Dag Wieers"
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-n, \-\-no\-launch
+.RS 4
+By default if no listener is running, unoconv will launch its own (temporary) listener to make sure the conversion works\&. This option will abort the conversion if no listener is found, rather than starting our own listener\&.
+.RE
+.PP
+\-o, \-\-output
+.RS 4
+If the argument is a directory, put the converted documents in this directory\&. If multiple input files are provided, use it as a basename (and add output extension)\&. Otherwise use it as the output filename\&.
+.RE
+.PP
+\-\-password
+.RS 4
+Provide a password to decrypt the document
+.RE
+.PP
+\-\-pipe
+.RS 4
+Use a pipe as an alternative connection mechanism to talk to LibreOffice\&.
+.RE
+.PP
+\-p, \-\-port
+.RS 4
+Port to listen on (as listener) or to connect to (as client)\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Default port is \'2002\'\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-\-preserve
+.RS 4
+Keep timestamp and permissions of the original document
+.RE
+.PP
+\-s, \-\-server
+.RS 4
+Server (address) to listen on (as listener) or to connect to (as client)\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Default server is \'localhost\'\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\-\-show
+.RS 4
+List the possible output formats to be used with
+\-f\&.
+.RE
+.PP
+\-\-stdin
+.RS 4
+Read input file from stdin (filenames are ignored if provided)
+.RE
+.PP
+\-\-stdout
+.RS 4
+Print converted output file to stdout\&.
+.RE
+.PP
+\-t, \-\-template
+.RS 4
+Specify the template to use for importing styles from\&. This can be very useful if you have a corporate identity you have to apply to every document you distribute\&.
+.RE
+.PP
+\-T, \-\-timeout
+.RS 4
+When unoconv starts its own listener, try to connect to it for an amount of seconds before giving up\&. Increasing this may help when you receive random errors caused by the listener not being ready to accept conversion jobs\&.
+.RE
+.PP
+\-v, \-\-verbose
+.RS 4
+Be more and more and more verbose\&.
+.RE
+.SH "ARGUMENTS"
+.sp
+You can provide one or more \fBfiles\fR as arguments to convert each of them to the specified \fBoutput format\fR\&.
+.SH "IMPORT FILTERS"
+.sp
+Depending on the used input file, a different LibreOffice import filter is automatically used by unoconv\&. This import filter can be influenced by the \-i option that, depending on the filter used, accepts different arguments\&.
+.sp
+It is not always clear what import filter options you can provide, the import dialog in LibreOffice for the filter you ar using might give a good indication as to what you can expect as import filter options\&.
+.sp
+The reference is LibreOffice\(cqs documentation, for spreadsheets it is described at: \m[blue]\fBhttp://wiki\&.services\&.openoffice\&.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options\fR\m[] but we will look into some examples\&.
+.SH "DEFAULT IMPORT FILTER OPTIONS"
+.sp
+The default import filter for many imports (eg\&. Lotus, dBase or DIF) accepts as the only argument the input encoding\-type, so if you require utf\-8 (76) you can do:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\-i FilterOptions=76
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+For a list of possible encoding types, you can use the above link to find the possible options\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FilterOptions
+.RE
+.SH "TEXT IMPORT FILTER OPTIONS"
+.sp
+The Text import filter accepts a FilterOptions setting holding the input encoding\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FilterOptions
+.RE
+.SH "CSV IMPORT FILTER OPTIONS"
+.sp
+The CSV import filter accepts a FilterOptions setting, the order is: \fIseparator(s),text\-delimiter,encoding,first\-row,column\-format\fR
+.sp
+For example you might want to use this for a \fIreal\fR comma\-separated document:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\-i FilterOptions=44,34,76,2,1/5/2/1/3/1/4/1
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+which will use a comma (44) as the field separator, a double quote (34) as the text delimiter, UTF\-8 (76) for the input encoding, start from the second row and use the specified formats for each column (1 means standard, 5 means YY/MM/DD date)
+.sp
+If you like to use more than one separator (say a space or a tab) and use the system\(cqs encoding (9), but with no text\-delimiter, you can do:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\-i FilterOptions=9/32,,9,2
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+For a list of possible encoding types, you can use the above link to find the possible options\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FilterOptions
+.RE
+.SH "EXPORT FILTERS"
+.sp
+In contrast to import filters, export filters can have multiple named options, although it is not always clear what options are available\&. It all depends on the version of LibreOffice\&. The export dialog you get in LibreOffice might give you a clue about what is possible, each of those widgets represents an option\&.
+.SH "TEXT EXPORT FILTER OPTIONS"
+.sp
+The Text export filter accepts a FilterOptions setting holding the output encoding\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FilterOptions
+.RE
+.sp
+The order of the arguments is: \fIencoding,field\-seperator,text\-delimiter,quote\-all\-text\-cells,save\-cell\-content\-as\-shown\fR
+.SH "CSV EXPORT FILTER OPTIONS"
+.sp
+The CSV export filter accepts various arguments, the order is: \fIfield\-seperator(s),text\-delimiter,encoding\fR
+.sp
+For example you might want to use this for a \fIreal\fR comma\-separated document:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\-e FilterOptions=44,34,76
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+which will use a comma (44) as the field separator, a double quote (34) as the text delimiter, UTF\-8 (76) for the export encoding, start from the second row and use the specified formats for each column (1 means standard, 5 means YY/MM/DD date)
+.sp
+If you like to use more than one separator (say a space or a tab) and use the system\(cqs encoding (9), but with no text\-delimiter, you can do:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\-e FilterOptions=9/32,,9
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+For a list of possible encoding types, you can use the above link to find the possible options\&.
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FilterOptions
+.RE
+.SH "PDF EXPORT FILTER OPTIONS"
+.sp
+The PDF export filter is likely the most advanced export filter in its kind with a myriad of options one can use\&. The export filter options are described in a separate document, or on LibreOffice\(cqs wiki at:
+.sp
+\m[blue]\fBhttp://wiki\&.services\&.openoffice\&.org/wiki/API/Tutorials/PDF_export\fR\m[]
+.sp
+For example one can specify: \-e PageRange=1\-2
+.sp
+Here is a list of all options, however for more details please look in \fIfilters\&.txt\fR:
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+AllowDuplicateFieldNames
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+CenterWindow
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Changes
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ConvertOOoTargetToPDFTarget
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+DisplayPDFDocumentTitle
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+DocumentOpenPassword
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+EmbedStandardFonts
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+EnableCopyingOfContent
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+EnableTextAccessForAccessibilityTools
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+EncryptFile
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportBookmarks
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportBookmarksToPDFDestination
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportFormFields
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportLinksRelativeFsys
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportNotes
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ExportNotesPages
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FirstPageOnLeft
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+FormsType
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+HideViewerMenubar
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+HideViewerToolbar
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+HideViewerWindowControls
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+InitialPage
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+InitialView
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+IsAddStream
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+IsSkipEmptyPages
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Magnification
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+MaxImageResolution
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+OpenBookmarkLevels
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+OpenInFullScreenMode
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+PageLayout
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+PageRange
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+PDFViewSelection
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+PermissionPassword
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Printing
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Quality
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ReduceImageResolution
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ResizeWindowToInitialPage
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+RestrictPermissionPassword
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Selection
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+SelectPdfVersion
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+UseLosslessCompression
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+UseTaggedPDF
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+UseTransitionEffects
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Watermark
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Zoom
+.RE
+.SS "GRAPHICS EXPORT FILTER OPTIONS"
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Height
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Resolution
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Width
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBBMP EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Compression
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+RLEEncoding
+.RE
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBJPEG EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ColorDepth
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Quality
+.RE
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBPBM/PGM/PPM EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Encoding
+.RE
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBPNG EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Compression
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+InterlacedMode
+.RE
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBGIF EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+InterlacedMode
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Transparency
+.RE
+.RE
+.sp
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBEPS EXPORT FILTER OPTIONS\fR
+.RS 4
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+ColorFormat
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Compression
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Preview
+.RE
+.sp
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.sp -1
+.IP \(bu 2.3
+.\}
+Version
+.RE
+.RE
+.SH "EXAMPLES"
+.sp
+You can use unoconv in standalone mode, this means that in absence of an LibreOffice listener, it will starts its own:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+unoconv \-f pdf some\-document\&.odt
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+One can use unoconv as a listener (by default localhost:2002) to let other unoconv instances connect to it:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+unoconv \-\-listener &
+unoconv \-f pdf some\-document\&.odt
+unoconv \-f doc other\-document\&.odt
+unoconv \-f jpg some\-image\&.png
+unoconv \-f xsl some\-spreadsheet\&.csv
+kill \-15 %\-
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+This also works on a remote host:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+unoconv \-\-listener \-\-server 1\&.2\&.3\&.4 \-\-port 4567
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+and then connect another system to convert documents:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+unoconv \-\-server 1\&.2\&.3\&.4 \-\-port 4567
+.fi
+.if n \{\
+.RE
+.\}
+.SH "ENVIRONMENT VARIABLES"
+.PP
+UNO_PATH
+.RS 4
+specifies what LibreOffice pyuno installation unoconv needs to use eg\&.
+\fI/opt/libreoffice3\&.4/basis\-link/program\fR
+.RE
+.SH "EXIT STATUS"
+.sp
+Normally, the exit status is 0 if the conversion ran successful\&. If an error has occured, the return code is most likely an error returned by LibreOffice (or its interface, called UNO) however, the error never translates to something meaningful\&. In case you like to decipher the LibreOffice errCode, look at:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+http://cgit\&.freedesktop\&.org/libreoffice/core/tree/tools/inc/tools/errcode\&.hxx
+http://cgit\&.freedesktop\&.org/libreoffice/core/tree/svtools/inc/svtools/sfxecode\&.hxx
+http://cgit\&.freedesktop\&.org/libreoffice/core/tree/svtools/inc/svtools/soerr\&.hxx
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Using the above lists, the error code 2074 means:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Class: 1 (ERRCODE_CLASS_ABORT)
+Code: 26 (ERRCODE_IO_INVALIDPARAMETER or SVSTREAM_INVALID_PARAMETER)
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+And the error code 3088 means:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Class: 3 (ERRCODE_CLASS_NOTEXISTS)
+Code: 16 (ERRCODE_IO_CANTWRITE)
+.fi
+.if n \{\
+.RE
+.\}
+.SH "SEE ALSO"
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+convert(1), file(1), odt2txt
+.fi
+.if n \{\
+.RE
+.\}
+.SH "BUGS"
+.sp
+unoconv uses the UNO bindings to connect to LibreOffice, in absence of a usable socket, it will start its own LibreOffice instance with the correct parameters\&.
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+Please see the TODO file for known bugs and future plans\&.
+.sp .5v
+.RE
+.SH "REFERENCES"
+.sp
+unoconv is very useful together with the following tools:
+.PP
+Asciidoc
+.RS 4
+
+\m[blue]\fBhttp://www\&.methods\&.co\&.nz/asciidoc/\fR\m[]
+.RE
+.PP
+asciidoc\-odf
+.RS 4
+
+\m[blue]\fBhttp://github\&.com/dagwieers/asciidoc\-odf\fR\m[]
+.RE
+.PP
+docbook2odf
+.RS 4
+
+\m[blue]\fBhttp://open\&.comsultia\&.com/docbook2odf/\fR\m[]
+.RE
+.sp
+A list of possible import and export formats is available from:
+.PP
+OpenOffice 2\&.1
+.RS 4
+
+\m[blue]\fBhttp://wiki\&.services\&.openoffice\&.org/wiki/Framework/Article/Filter/FilterList_OOo_2_1\fR\m[]
+.RE
+.PP
+OpenOffice 3\&.0
+.RS 4
+
+\m[blue]\fBhttp://wiki\&.services\&.openoffice\&.org/wiki/Framework/Article/Filter/FilterList_OOo_3_0\fR\m[]
+.RE
+.SH "AUTHOR"
+.sp
+Written by Dag Wieers, <\m[blue]\fBdag@wieers\&.com\fR\m[]\&\s-2\u[1]\d\s+2>
+.SH "RESOURCES"
+.sp
+Main web site: \m[blue]\fBhttp://dag\&.wieers\&.com/home\-made/unoconv/\fR\m[]
+.SH "COPYING"
+.sp
+Copyright (C) 2007 Dag Wieers\&. Free use of this software is granted under the terms of the GNU General Public License (GPL)\&.
+.SH "AUTHOR"
+.PP
+\fBDag Wieers\fR <\&dag@wieers\&.com\&>
+.RS 4
+Author.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+dag@wieers.com
+.RS 4
+\%mailto:dag@wieers.com
+.RE

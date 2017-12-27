@@ -1,0 +1,96 @@
+00:56:20.459	46.174.191.31:32744	admin	401	Basic authentication expected.	104.12 ms
+01:09:54.052	5.186.250.50:7448	admin	401	Basic authentication expected.	108.73 ms
+02:44:37.284	46.174.191.28:32744	admin	401	Basic authentication expected.	206.44 ms
+03:08:45.220	89.170.91.72:40742	admin	401	Basic authentication expected.	106.53 ms
+07:57:13.434	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:57:13.967	0:0:0:0:0:0:0:1:51873	admin	200		533.48 ms
+07:57:15.810	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/login
+07:57:15.854	0:0:0:0:0:0:0:1:51873	admin	200		45.01 ms
+07:57:20.979	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[POST] http://localhost:8984/logging
+07:57:21.207	0:0:0:0:0:0:0:1:51873	admin	200		228.51 ms
+07:57:21.210	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/
+07:57:21.230	0:0:0:0:0:0:0:1:51873	admin	200		20.56 ms
+07:57:21.233	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil
+07:57:21.258	0:0:0:0:0:0:0:1:51873	admin	200		25.36 ms
+07:57:21.261	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:57:21.298	0:0:0:0:0:0:0:1:51873	admin	200		37.54 ms
+07:57:35.652	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/pageHTML-fr-texteAccueil
+07:57:35.689	0:0:0:0:0:0:0:1:51873	admin	200		37.39 ms
+07:57:38.377	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil
+07:57:38.395	0:0:0:0:0:0:0:1:51873	admin	200		17.66 ms
+07:57:38.397	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:57:38.433	0:0:0:0:0:0:0:1:51873	admin	200		36.02 ms
+07:57:39.793	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/Images
+07:57:39.858	0:0:0:0:0:0:0:1:51873	admin	200		64.88 ms
+07:57:43.673	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil
+07:57:43.690	0:0:0:0:0:0:0:1:51873	admin	200		17.29 ms
+07:57:43.693	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:57:43.729	0:0:0:0:0:0:0:1:51873	admin	200		36.21 ms
+07:57:46.104	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/user/admin
+07:57:46.132	0:0:0:0:0:0:0:1:51873	admin	200		28.68 ms
+07:57:47.251	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/gere-users
+07:57:47.280	0:0:0:0:0:0:0:1:51873	admin	200		29.01 ms
+07:57:48.128	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/gere-site
+07:57:48.163	0:0:0:0:0:0:0:1:51873	admin	200		34.9 ms
+07:57:58.259	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/css-03
+07:57:58.579	0:0:0:0:0:0:0:1:51873	admin	200		319.81 ms
+07:57:58.581	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/gere-site
+07:57:58.617	0:0:0:0:0:0:0:1:51873	admin	200		36.19 ms
+07:58:01.010	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/css-02
+07:58:01.043	0:0:0:0:0:0:0:1:51873	admin	200		33.23 ms
+07:58:01.046	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/gere-site
+07:58:01.081	0:0:0:0:0:0:0:1:51873	admin	200		35.25 ms
+07:58:09.786	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil
+07:58:09.802	0:0:0:0:0:0:0:1:51873	admin	200		16.94 ms
+07:58:09.805	0:0:0:0:0:0:0:1:51873	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:58:09.835	0:0:0:0:0:0:0:1:51873	admin	200		29.59 ms
+07:59:36.502	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/isilexPremium-Messagerie
+07:59:36.529	0:0:0:0:0:0:0:1:52009	admin	200		27.64 ms
+07:59:42.543	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/isilexPremium-Messagerie
+07:59:42.570	0:0:0:0:0:0:0:1:52009	admin	200		27.57 ms
+07:59:44.050	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/newFicheXml
+07:59:44.400	0:0:0:0:0:0:0:1:52009	admin	200		349.94 ms
+07:59:44.655	0:0:0:0:0:0:0:1:52011	admin	401	Basic authentication expected.	100.35 ms
+07:59:44.862	0:0:0:0:0:0:0:1:52011	admin	401	Basic authentication expected.	205.54 ms
+07:59:45.728	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/new-fiche
+07:59:45.832	0:0:0:0:0:0:0:1:52009	admin	200		103.84 ms
+07:59:47.380	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/user/admin
+07:59:47.408	0:0:0:0:0:0:0:1:52009	admin	200		28.01 ms
+07:59:48.472	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/gere-users
+07:59:48.498	0:0:0:0:0:0:0:1:52009	admin	200		26.21 ms
+07:59:50.856	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/gere-site
+07:59:50.886	0:0:0:0:0:0:0:1:52009	admin	200		29.94 ms
+07:59:52.062	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/
+07:59:52.078	0:0:0:0:0:0:0:1:52009	admin	200		16.54 ms
+07:59:52.081	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/accueil
+07:59:52.097	0:0:0:0:0:0:0:1:52009	admin	200		15.81 ms
+07:59:52.099	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+07:59:52.127	0:0:0:0:0:0:0:1:52009	admin	200		28.07 ms
+08:00:01.769	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/
+08:00:01.789	0:0:0:0:0:0:0:1:52009	admin	200		19.46 ms
+08:00:01.791	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/accueil
+08:00:01.807	0:0:0:0:0:0:0:1:52009	admin	200		15.66 ms
+08:00:01.814	0:0:0:0:0:0:0:1:52009	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+08:00:01.840	0:0:0:0:0:0:0:1:52009	admin	200		26.38 ms
+08:08:14.431	46.174.191.29:32744	admin	401	Basic authentication expected.	102.36 ms
+08:13:14.403	116.0.0.130:39067	admin	401	Basic authentication expected.	101.67 ms
+08:40:02.746	91.236.75.4:45289	admin	401	Basic authentication expected.	217.91 ms
+08:50:53.615	0:0:0:0:0:0:0:1:53665	admin	REQUEST	[POST] http://localhost:8984/change-lang
+08:50:53.637	0:0:0:0:0:0:0:1:53665	admin	200		22.08 ms
+08:50:53.640	0:0:0:0:0:0:0:1:53665	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+08:50:53.668	0:0:0:0:0:0:0:1:53665	admin	200		28.59 ms
+08:51:20.754	0:0:0:0:0:0:0:1:53665	admin	REQUEST	[GET] http://localhost:8984/accueil
+08:51:20.769	0:0:0:0:0:0:0:1:53665	admin	200		15.9 ms
+08:51:20.772	0:0:0:0:0:0:0:1:53665	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+08:51:20.800	0:0:0:0:0:0:0:1:53665	admin	200		27.78 ms
+11:22:56.263	46.174.191.31:32744	admin	401	Basic authentication expected.	201.51 ms
+13:52:42.244	217.182.195.10:41058	admin	401	Basic authentication expected.	109.04 ms
+13:52:42.905	217.182.195.10:41171	admin	401	Basic authentication expected.	218.41 ms
+15:04:17.652	46.174.191.28:32744	admin	401	Basic authentication expected.	424.23 ms
+15:10:26.194	185.110.132.239:54120	admin	401	Basic authentication expected.	105.22 ms
+18:56:38.268	46.174.191.28:32744	admin	401	Basic authentication expected.	819.92 ms
+19:29:18.136	217.182.195.10:38735	admin	401	Basic authentication expected.	420.55 ms
+19:29:19.141	217.182.195.10:38872	admin	401	Basic authentication expected.	846.84 ms
+21:23:43.773	46.174.191.30:32744	admin	401	Basic authentication expected.	104.24 ms
+23:22:01.751	155.94.169.2:48030	admin	401	Basic authentication expected.	108.68 ms
+23:57:09.076	60.191.38.77:17653	admin	401	Basic authentication expected.	109.76 ms

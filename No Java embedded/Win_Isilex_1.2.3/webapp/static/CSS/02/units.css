@@ -1,0 +1,361 @@
+/*(:
+: IsilexLight is a Light CMS and XML Collaborative XML Databases Tool for managers.
+: Copyright (C) 2016 Xavier-Laurent Salvador (85%) et Sylvain Chea (15%)
+: This file "units.css" is part of IsilexLight.
+: IsilexLight is free software: you can redistribute it and/or modify
+: it under the terms of the GNU General Public License as published by
+: the Free Software Foundation, either version 3 of the License, or
+: (at your option) any later version.
+: IsilexLight is distributed in the hope that it will be useful,
+: but WITHOUT ANY WARRANTY; without even the implied warranty of
+: MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+: GNU General Public License for more details.
+: You should have received a copy of the GNU General Public License
+: along with IsilexLight. If not, see <http://www.gnu.org/licenses/>.
+:)
+*/ 
+#boutons {
+	margin-top: 30px;
+	margin-left: 14px;
+	}
+#boutonsBas {
+	margin-top:10px;
+	margin-left: 14px;
+}
+#boutonInsertion{
+
+	}
+#boutonMenu{
+
+	}
+#boutonsValid{
+	float:left;
+	}
+#choixFinal{
+	position: absolute; 
+	z-index: 20000; 
+	margin-top: 30%; 
+	margin-left: 30%; 
+	width:30%; 
+	background-color: white; 
+	padding: 20px; 
+	border: 10px #CACACA solid; 
+	box-shadow:10px 10px 5px #888888; 
+	display:none; 
+	}
+#codeMirrorStart{
+
+	}
+#console{
+	width:100%;
+	}
+#content{
+	display:none;
+	}
+#contenu {
+	height: 100%;
+	margin-right: 250px;
+	}
+#controle{
+	background: transparent;
+	border-radius: 6px; 
+	border-left:2px solid #f88000;
+	width: 45%;
+	height: 90%;
+	overflow: scroll;
+	position:fixed;
+	right: 10px;
+	background-color:white;
+	}
+#controleXml{
+	float:left;  
+	height: 45%;
+	width: 40%;
+	overflow:scroll;
+	margin-right: 10px;
+	border: solid 2px #ACACAC;
+	}
+#dom{
+	display:inline; 
+	font-size:small;
+	background: #ebb105;
+    background-image: -webkit-linear-gradient(top, #ebb105, #b8792c);
+    background-image: -moz-linear-gradient(top, #ebb105, #b8792c);
+    background-image: -ms-linear-gradient(top, #ebb105, #b8792c);
+    background-image: -o-linear-gradient(top, #ebb105, #b8792c);
+    background-image: linear-gradient(to bottom, #ebb105, #b8792c);
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 3px 8px 3px 8px;
+    text-decoration: none;
+	}
+#domax{
+	display:none;
+	}
+#ext > quote, #xls > quote { padding:0px; font-style:normal; }
+#ext {
+	border-left: 6px solid white;
+	border-right: 6px solid white;
+	margin-bottom: 25px;
+	width: 300px;
+	float:right;
+	background-color:#f2ebcd; padding:8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	}
+#footerIdefx{
+ 	z-index: 7000;
+ 	width:100%; 
+ 	position:fixed; 
+ 	bottom:0px; 
+ 	left: 0px; 
+ 	text-align: center; 
+ 	color: #A0A0A0; 
+ 	font-size: xx-small; 
+ 	background-color:white; 
+ 	padding: 3px;
+	}
+#global{
+		  /*background-image: linear-gradient(to bottom, #68849C,  #37404e);*/
+	}
+#goo{
+	padding-left: 50px;
+	}
+#inputFiche{
+
+	}
+#listeDesMots{
+	float:left; 
+	width:20%;
+	height: 400px;
+	overflow: scroll;
+	}
+#listeDesMots > ul {
+	columns: 1 300px;
+	}
+#listeUsers{
+	float:left;  
+	width:30%;
+	}
+#masque{
+	width:100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.7); 
+	position: fixed;
+	top: 0px;
+	left:0px;
+	z-index:4000;
+	display:none;
+	}
+#mention{
+	float:left;
+	}
+#mentionsyno {
+	clear:both;
+	margin-left: 15px;
+	margin-top: 1px;	
+	}
+#mentionsyno > a.gold {font-size: x-small; color:white;}
+
+#paddleXml {
+		/*position: fixed;
+		top:0px;
+		padding-top: 30px;
+		margin-left: 70%;
+		width: 250px;
+		z-index: 2000;
+		background-color: #8000ff;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		-webkit-box-shadow:0px 1px 10px #CACACA;
+    	-moz-box-shadow:0px 1px 10px #CACACA;
+   	 	box-shadow:0px 1px 10px #CACACA; 
+   	 	border-top: 50px solid #804000;
+		padding-left: 10px;
+		padding-right: 10px;*/
+		position: fixed;
+		top: 150px;
+		left:0px;
+		width: 130px;
+}
+#menuEdit {
+
+}
+#renvoidtd {
+	/*position: fixed;
+	margin-left: 70%;
+	top: 50px;
+	width: 250px;
+	height: 150px;
+	z-index:6000;
+	padding: 10px; 
+	font-size:small; 
+	color:#00FF00;
+	background-color:black;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;*/
+	display:none;
+	}
+#tools {
+	margin-left: 40px;
+}	
+
+#mesBoutons {
+	cursor: pointer;
+	}
+#mesBoutons:hover {
+	opacity:0.5;
+	transform: scale(1.2);
+	}
+
+#pg{
+
+	}
+
+#renvoidtdOnglet {
+	background-color: black;
+	padding-top: 10px;
+	position: absolute;
+	top: 50px;
+	left: 80px;
+	background-color: black;
+	width: 120px;
+	height: 20px;
+	color: white;
+	text-align:center;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	cursor:pointer;
+	-webkit-box-shadow:0px 1px 10px #CACACA;
+    -moz-box-shadow:0px 1px 10px #CACACA;
+    box-shadow:0px 1px 10px #CACACA; 
+    display:none;
+}
+#res{
+	margin: 0px;
+	border-left: 3px solid white;
+	border-bottom: 5px solid white;
+	border-bottom-left-radius:20px;
+	border-top-right-radius:20px;
+	padding: 2px; 
+	padding-right: 0px;
+	min-height: 50px;
+	width: 600px;
+	margin-bottom: 15px;
+	padding-bottom:10px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	display:block;
+	}
+#resT{
+	margin-bottom: 33px;
+	margin-top: 2px;
+	}
+#resT a {
+	font-size:x-small;  
+        font-weight: bold;
+	}
+#resres, #resresl {
+	margin: 10px;
+	margin-right:0px;
+	font-size: small;
+	text-transform: lowercase;
+	}
+#resres[score^="500"],#resres[score^="400"] {
+     border-top-left-radius:20px;
+	}
+#resres[score^="500"] > #ext,#resres[score^="400"]  > #ext {display:none;}
+#resresl {margin: 30px; display:block;clear:both;color:#0d5519; font-weight: bold;}
+#resresl[score^="500"] {}
+#resres mark {
+	color:#42424b;
+	background-color: rgba(255,255,255,0.5);
+	font-weight:bold;
+	border-radius : 20px;
+	}
+#resres a{
+	font-size: medium;
+	font-weight: bold;
+ 	color: #1a0dab;
+	text-transform: capitalize;	
+	}
+#resres[score^="500"] > a, #resres[score^="400"] > a {}
+#resres[score^="350"] > a {}
+#sauver{
+
+	}
+#sousTitre {
+	position: absolute;
+	top: 250px;
+	left: 220px;
+	font-size:small;
+	}
+#sousent {margin-left: 15px;}
+#sousent.keyword.float>a  {
+	float: left; 
+	font-family: "Impact", Charcoal, sans-serif;
+	color: black;
+ 	font-size: 8px;
+ 	text-decoration: none;
+	}
+#sousent	.float>a:hover {
+	background: #3cb0fd;
+  	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  	text-decoration: none;
+	}
+#tableau{
+    margin-left: 20px;
+	width: 100%;
+	}
+#texteAccueil {
+	border-radius:20px;
+	padding-top: 20px;
+	margin-top: -80px;
+	margin-left:140px;
+	margin-right: 50px;
+	padding-left: 80px;
+	padding-right: 80px;
+	height:250%;
+	text-align: justify;
+	background-color: #f8f8f8;
+	}
+
+#texteAccueil a {
+    background-color: transparent;
+	color:#68849C;
+}
+
+#true{
+
+	}
+#txtdef{
+	float:left;
+	width:100%;
+	background:white;
+	}
+#valid{
+
+	}
+#xml{
+	float:left;  
+	width: 40%;
+	border-radius: 6px; 
+	margin-left: 150px;
+	overflow-x:scroll;
+	font-size: 11px;
+	line-height: 20px;
+	}
+#xmlMasque {
+	float:left;
+	width: 50%;
+}
+

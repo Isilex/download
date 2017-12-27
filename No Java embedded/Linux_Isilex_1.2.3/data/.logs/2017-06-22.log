@@ -1,0 +1,29 @@
+12:52:44.707	SERVER	admin	OK	Server was started (port: 1984).
+12:52:44.768	SERVER	admin	OK	HTTP Server was started (port: 8984).
+12:52:47.029	0:0:0:0:0:0:0:1:52795	admin	401	Basic authentication expected.	110.05 ms
+12:52:51.534	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/
+12:52:52.396	0:0:0:0:0:0:0:1:52795	admin	200		863.56 ms
+12:52:52.401	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/accueil
+12:52:52.448	0:0:0:0:0:0:0:1:52795	admin	200		47.92 ms
+12:52:52.451	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+12:52:52.721	0:0:0:0:0:0:0:1:52795	admin	200		269.41 ms
+12:52:54.964	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/rubrique/A/1
+12:52:55.031	0:0:0:0:0:0:0:1:52795	admin	200		67.68 ms
+12:52:57.338	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/login
+12:52:57.405	0:0:0:0:0:0:0:1:52795	admin	200		67.58 ms
+12:53:00.916	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[POST] http://localhost:8984/logging
+12:53:01.206	0:0:0:0:0:0:0:1:52795	admin	200		290.74 ms
+12:53:01.210	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/
+12:53:01.239	0:0:0:0:0:0:0:1:52795	admin	200		29.91 ms
+12:53:01.243	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/accueil
+12:53:01.275	0:0:0:0:0:0:0:1:52795	admin	200		32.25 ms
+12:53:01.278	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+12:53:01.352	0:0:0:0:0:0:0:1:52795	admin	200		74.37 ms
+12:53:04.708	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/rubrique/A/1
+12:53:04.755	0:0:0:0:0:0:0:1:52795	admin	200		47.22 ms
+12:53:07.486	0:0:0:0:0:0:0:1:52795	admin	REQUEST	[GET] http://localhost:8984/new-fiche
+12:53:07.660	0:0:0:0:0:0:0:1:52795	admin	200		174.35 ms
+12:53:07.820	0:0:0:0:0:0:0:1:52815	admin	401	Basic authentication expected.	103.05 ms
+12:53:08.022	0:0:0:0:0:0:0:1:52815	admin	401	Basic authentication expected.	200.31 ms
+12:53:14.383	SERVER	admin	OK	HTTP Server was stopped (port: 8984).
+12:53:14.384	SERVER	admin	OK	Server was stopped (port: 1984).

@@ -1,0 +1,35 @@
+01:28:28.028	61.164.149.177:52591	admin	401	Basic authentication expected.	107.87 ms
+03:15:25.846	46.174.191.31:32744	admin	401	Basic authentication expected.	423.5 ms
+03:56:22.854	61.164.149.128:57838	admin	401	Basic authentication expected.	109.93 ms
+04:33:06.033	112.193.192.35:60433	admin	401	Basic authentication expected.	107.21 ms
+04:35:41.770	107.150.2.31:4487	admin	401	Access denied.	100.74 ms
+05:10:05.163	46.174.191.31:32744	admin	401	Basic authentication expected.	838.57 ms
+06:46:13.230	139.162.214.51:38048	admin	401	Basic authentication expected.	108.46 ms
+07:02:52.533	91.236.75.4:60000	admin	401	Basic authentication expected.	416.84 ms
+07:31:33.773	87.176.91.115:51959	admin	401	Basic authentication expected.	105.28 ms
+07:31:34.405	87.176.91.115:52011	admin	401	Basic authentication expected.	218.48 ms
+07:31:34.923	87.176.91.115:52049	admin	401	Basic authentication expected.	402.46 ms
+07:31:46.075	87.176.91.115:53406	admin	401	Basic authentication expected.	859.53 ms
+07:31:57.954	87.176.91.115:54814	admin	401	Basic authentication expected.	1691.83 ms
+11:31:03.862	46.174.191.31:32744	admin	401	Basic authentication expected.	1682.42 ms
+12:54:09.916	123.249.3.189:3618	admin	401	Basic authentication expected.	101.5 ms
+13:13:37.325	221.194.44.142:1201	admin	401	Basic authentication expected.	100.6 ms
+14:24:57.486	68.180.229.111:55314	admin	401	Basic authentication expected.	102.7 ms
+14:24:58.904	68.180.229.111:55520	admin	401	Basic authentication expected.	210.83 ms
+15:29:27.876	46.174.191.29:32744	admin	401	Basic authentication expected.	209.53 ms
+17:01:34.757	186.223.255.8:46422	admin	401	Basic authentication expected.	105.45 ms
+17:01:35.843	186.223.255.8:46429	admin	401	Basic authentication expected.	211.81 ms
+17:30:30.775	0:0:0:0:0:0:0:1:56532	admin	REQUEST	[GET] http://localhost:8984/
+17:30:30.956	0:0:0:0:0:0:0:1:56532	admin	200		182.19 ms
+17:30:30.960	0:0:0:0:0:0:0:1:56532	admin	REQUEST	[GET] http://localhost:8984/accueil
+17:30:30.978	0:0:0:0:0:0:0:1:56532	admin	200		17.91 ms
+17:30:30.981	0:0:0:0:0:0:0:1:56532	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+17:30:31.082	0:0:0:0:0:0:0:1:56532	admin	200		101.45 ms
+17:54:06.991	0:0:0:0:0:0:0:1:57501	admin	REQUEST	[GET] http://localhost:8984/rubrique/A/1
+17:54:07.545	0:0:0:0:0:0:0:1:57501	admin	200		554.7 ms
+19:09:04.887	139.162.79.87:49096	admin	401	Basic authentication expected.	103.15 ms
+19:12:59.901	46.174.191.30:32744	admin	401	Basic authentication expected.	201.26 ms
+19:43:34.480	180.97.106.37:32334	admin	401	Basic authentication expected.	107.81 ms
+20:17:38.296	46.174.191.32:32744	admin	401	Basic authentication expected.	104.15 ms
+22:14:20.102	SERVER	admin	OK	HTTP Server was stopped (port: 8984).
+22:14:20.103	SERVER	admin	OK	Server was stopped (port: 1984).

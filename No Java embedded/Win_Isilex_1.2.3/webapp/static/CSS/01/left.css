@@ -1,0 +1,81 @@
+/*(:
+: IsilexLight is a Light CMS and XML Collaborative XML Databases Tool for managers.
+: Copyright (C) 2016 Xavier-Laurent Salvador (85%) et Sylvain Chea (15%)
+: This file "left.css" is part of IsilexLight.
+: IsilexLight is free software: you can redistribute it and/or modify
+: it under the terms of the GNU General Public License as published by
+: the Free Software Foundation, either version 3 of the License, or
+: (at your option) any later version.
+: IsilexLight is distributed in the hope that it will be useful,
+: but WITHOUT ANY WARRANTY; without even the implied warranty of
+: MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+: GNU General Public License for more details.
+: You should have received a copy of the GNU General Public License
+: along with IsilexLight. If not, see <http://www.gnu.org/licenses/>.
+:)
+*/ 
+#boite{
+	float:left;
+	}
+#menucote{
+	float: left;
+	list-style: none;
+	margin-left:1px;
+	padding:12px 15px 21px 15px;
+	background-size: 100%;
+	text-transform: uppercase;
+	/*border-radius: 15px 15px 15px 15px;
+    border-color:#CACACA;
+    border-style:solid;
+	border-width: 1px;
+   	border-right:none;
+   	border-bottom-width:3px;
+   	border-left-width:3px;*/
+   	width:100px;
+	}
+#menucote>li>a {
+  background-image: -webkit-linear-gradient(top, #ff8000, #85430d);
+  background-image: -moz-linear-gradient(top, #ff8000, #85430d);
+  background-image: -ms-linear-gradient(top, #ff8000, #85430d);
+  background-image: -o-linear-gradient(top, #ff8000, #85430d);
+  background-image: linear-gradient(to bottom, #ff8000, #85430d);
+  -webkit-box-shadow: -2px 1px 3px #666666;
+  -moz-box-shadow: -2px 1px 3px #666666;
+  box-shadow: -2px 1px 3px #666666;
+  color: #ffffff;
+    background: #68849C;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+  width: 80px;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+	}
+#menucote a.boutonspec {
+	/*classe des boutons spéciaux*/
+	/*Plus utilisé depuis 2012*/
+	color:#f4a460;
+	}
+#menucote a:hover { 
+  background: #dedede;
+  background-image: -webkit-linear-gradient(top, #dedede, #707070);
+  background-image: -moz-linear-gradient(top, #dedede, #707070);
+  background-image: -ms-linear-gradient(top, #dedede, #707070);
+  background-image: -o-linear-gradient(top, #dedede, #707070);
+  background-image: linear-gradient(to bottom, #dedede, #707070);
+  text-decoration: none;
+	} 
+#menucote a:active {
+	/*Etat des boutons quand clic*/
+	color: #8E5543;
+	background-color: #FEDD9E;	
+	}
+#menucote a:not(:active):not(:hover){
+
+	}
+#menugauche{
+	float:left;
+	padding-top: 5px;
+	margin-left: 2px;
+	color:#577dad;
+	}

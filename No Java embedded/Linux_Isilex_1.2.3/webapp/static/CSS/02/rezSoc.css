@@ -1,0 +1,127 @@
+/*(:
+: IsilexLight is a Light CMS and XML Collaborative XML Databases Tool for managers.
+: Copyright (C) 2016 Xavier-Laurent Salvador (85%) et Sylvain Chea (15%)
+: This file "rezSoc.css" is part of IsilexLight.
+: IsilexLight is free software: you can redistribute it and/or modify
+: it under the terms of the GNU General Public License as published by
+: the Free Software Foundation, either version 3 of the License, or
+: (at your option) any later version.
+: IsilexLight is distributed in the hope that it will be useful,
+: but WITHOUT ANY WARRANTY; without even the implied warranty of
+: MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+: GNU General Public License for more details.
+: You should have received a copy of the GNU General Public License
+: along with IsilexLight. If not, see <http://www.gnu.org/licenses/>.
+:)
+*/ 
+#rezSocentry {
+	float:left;
+	width: 100%;
+	 font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
+     background-color: #eceff6;  
+    border: 1px solid #d4dae8;  
+    color: #333333;  
+    padding: 10px;  
+    font-size: 13px;  
+    font-weight: bold;  
+    margin-bottom: 10px;
+}
+
+#rezSocPartI {
+	float:left;
+	width: 100%;
+}
+
+#rezSocDateTime {
+	font-size: small;
+	 font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
+	  color: #333333;   
+}
+
+#rezSocDT {
+	float:left;
+	margin-left: 10px;
+}
+
+#rezSocDef {
+	margin-top: 15px;
+	width: 80%;
+	color: #333333;   
+	background-color: #f7f7f7;  
+    border: 1px solid #cccccc;  
+    color: #333333;  
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 6px;
+    font-size: 13px;  
+    font-weight: bold; 
+
+}
+
+#rezSocTitre, #rezSocTitre a {
+	float:left;
+	 color: #3b5998;  
+    outline-style: none;  
+    text-decoration: none;  
+    font-size: 13px;  
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#rezSocTitre:hover a {
+	text-decoration: underline; 
+} 
+
+#rezSocDef {
+	float:left;
+	width: 60%;
+	padding: 15px;
+	margin-left: 15px;
+}
+
+#rezSocCommFiches, #rezSocmessageOnForum {
+	float: left;
+	width: 100%;
+	font-size: small;
+	 font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
+	  color: #333333;   
+	
+}
+
+#messageOnForum > ul{
+		background-color: #f7f7f7;  
+    border: 1px solid #cccccc;  
+    color: #333333;  
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 6px;
+}
+
+#forumAnswer > ul.tabUserADmin {
+	font-size: x-small;
+	 font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
+	  color: #333333;   
+	   border-bottom: 1px solid #cccccc; 
+	   background-color: white;
+	   padding:10px;
+}
+
+#rezSocFooter {
+	position: absolute;
+	top: 250px;
+	left: 450px;
+}
+
+#rezSocFooterbis {
+	width: 100%;
+	float:left;
+	text-align:center;
+	margin-top: -15px;
+	margin-bottom: 110px;
+}
+
+.rezSocButton {
+	cursor: pointer;
+	margin-left: 15px;
+	
+}

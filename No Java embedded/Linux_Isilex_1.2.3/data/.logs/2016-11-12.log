@@ -1,0 +1,6 @@
+07:47:23.396	SERVER	admin	OK	Server was stopped (port: 1984).
+07:47:23.764	SERVER	admin	OK	HTTP Server was stopped (port: 8984).
+07:47:27.295	SERVER	admin	OK	Server was started (port: 1984).
+07:47:27.336	SERVER	admin	OK	HTTP Server was started (port: 8984).
+09:07:55.828	SERVER	admin	OK	Server was stopped (port: 1984).
+09:07:55.828	SERVER	admin	OK	HTTP Server was stopped (port: 8984).

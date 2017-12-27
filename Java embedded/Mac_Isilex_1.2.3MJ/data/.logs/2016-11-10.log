@@ -1,0 +1,56 @@
+20:10:14.468	SERVER	admin	OK	Server was started (port: 1984).
+20:10:14.518	SERVER	admin	OK	HTTP Server was started (port: 8984).
+20:10:16.052	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/user/flo
+20:10:16.891	0:0:0:0:0:0:0:1:64129	admin	200		840.7 ms
+20:10:19.610	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/login
+20:10:19.687	0:0:0:0:0:0:0:1:64129	admin	200		77.22 ms
+20:10:26.584	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[POST] http://localhost:8984/logging
+20:10:26.630	0:0:0:0:0:0:0:1:64129	admin	200		46.8 ms
+20:10:26.633	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/login?message=Failed!
+20:10:26.693	0:0:0:0:0:0:0:1:64129	admin	200		60.3 ms
+20:10:32.212	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[POST] http://localhost:8984/logging
+20:10:32.250	0:0:0:0:0:0:0:1:64129	admin	200		37.77 ms
+20:10:32.255	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/login?message=Failed!
+20:10:32.301	0:0:0:0:0:0:0:1:64129	admin	200		46.15 ms
+20:10:37.687	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/register
+20:10:37.732	0:0:0:0:0:0:0:1:64129	admin	200		45.22 ms
+20:10:49.939	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[POST] http://localhost:8984/registering
+20:10:50.089	0:0:0:0:0:0:0:1:64129	admin	200		149.21 ms
+20:10:50.091	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/user/flo
+20:10:50.429	0:0:0:0:0:0:0:1:64129	admin	200		337.68 ms
+20:10:53.190	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/
+20:10:53.210	0:0:0:0:0:0:0:1:64129	admin	200		20.56 ms
+20:10:53.213	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/accueil
+20:10:53.232	0:0:0:0:0:0:0:1:64129	admin	200		18.93 ms
+20:10:53.237	0:0:0:0:0:0:0:1:64129	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+20:10:53.328	0:0:0:0:0:0:0:1:64129	admin	200		91.04 ms
+20:11:02.312	SERVER	admin	OK	Server was stopped (port: 1984).
+20:11:02.312	SERVER	admin	OK	HTTP Server was stopped (port: 8984).
+21:04:57.495	SERVER	admin	OK	Server was started (port: 1984).
+21:04:57.542	SERVER	admin	OK	HTTP Server was started (port: 8984).
+21:05:00.015	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/
+21:05:00.819	0:0:0:0:0:0:0:1:64629	admin	200		804.89 ms
+21:05:00.822	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/accueil
+21:05:00.875	0:0:0:0:0:0:0:1:64629	admin	200		52.94 ms
+21:05:00.878	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+21:05:01.086	0:0:0:0:0:0:0:1:64629	admin	200		207.96 ms
+21:05:04.403	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/login
+21:05:04.478	0:0:0:0:0:0:0:1:64629	admin	200		74.97 ms
+21:05:08.544	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[POST] http://localhost:8984/logging
+21:05:08.697	0:0:0:0:0:0:0:1:64629	admin	200		153.21 ms
+21:05:08.700	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/login?message=Failed!
+21:05:08.753	0:0:0:0:0:0:0:1:64629	admin	200		53.41 ms
+21:05:13.477	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[POST] http://localhost:8984/logging
+21:05:13.528	0:0:0:0:0:0:0:1:64629	admin	200		50.74 ms
+21:05:13.531	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/
+21:05:13.558	0:0:0:0:0:0:0:1:64629	admin	200		27.24 ms
+21:05:13.561	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/accueil
+21:05:13.590	0:0:0:0:0:0:0:1:64629	admin	200		29.48 ms
+21:05:13.593	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/accueil/1
+21:05:13.867	0:0:0:0:0:0:0:1:64629	admin	200		274.07 ms
+21:05:17.498	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/new-fiche
+21:05:17.629	0:0:0:0:0:0:0:1:64629	admin	200		131.68 ms
+21:05:20.018	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[GET] http://localhost:8984/newFicheXml
+21:05:20.056	0:0:0:0:0:0:0:1:64629	admin	200		38.08 ms
+21:05:32.021	0:0:0:0:0:0:0:1:64629	admin	REQUEST	[POST] http://localhost:8984/validate-xsd
+21:05:32.069	0:0:0:0:0:0:0:1:64629	admin	200		48.05 ms

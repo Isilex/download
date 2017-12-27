@@ -1,0 +1,516 @@
+p{margin:0px;}
+
+a{
+	text-decoration: none;
+}
+h11{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 97.5000%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 6.4576%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -6.4576%;
+}
+h22{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 95.2500%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 8.6102%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -8.6102%;
+}
+h3{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 94.0000%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.7627%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -10.7627%;
+}
+h4{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.8969%;
+	margin-top: 3.5876%;
+	padding-left: 12.9153%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -12.9153%;
+	text-transform: none;
+}
+p{
+	margin: 0px;
+}
+sub{
+	font-size: 67%;
+	vertical-align: -10%;
+}
+sup{
+	font-size: 67%;
+	vertical-align: 33%;
+}
+.s1{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 0%;
+	text-transform: none;
+	white-space: normal;
+}
+.s2{
+	text-align: left;
+}
+.s3{
+	text-align: center;
+}
+.s4{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-indent: 4.2303%;
+	text-transform: none;
+	white-space: normal;
+}
+.s5{
+	font-size: 68.7500%;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-indent: 0.0000%;
+}
+.s6{
+	-webkit-hyphens: none;
+	break-after: page;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	page-break-after: always;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 4.2303%;
+	text-transform: none;
+	white-space: normal;
+}
+.s7{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0.0000%;
+	text-transform: none;
+}
+.s8{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 4.2373%;
+	text-transform: none;
+}
+.s9{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 8.4746%;
+	text-transform: none;
+}
+.s10{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 12.7119%;
+	text-transform: none;
+}
+.s11{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 87.5000%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 6.4576%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -6.4576%;
+}
+.s12{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.5983%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: -10.5983%;
+	text-transform: none;
+	white-space: normal;
+}
+.s13{
+	font-weight: bold;
+	text-align: center;
+}
+.s14{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.5983%;
+	padding-right: 0.0000%;
+	text-align: center;
+	text-decoration: none;
+	text-indent: -10.5983%;
+	text-transform: none;
+	white-space: normal;
+}
+.s15{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 8.4756%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-decoration: none;
+	text-indent: 0.0000%;
+	text-transform: none;
+	white-space: normal;
+}
+.s16{
+	font-weight: bold;
+	text-align: center;
+	text-indent: 0.0000%;
+}
+.s17{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.8359%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-indent: -2.3602%;
+	text-transform: none;
+	white-space: normal;
+}
+.s18{
+	font-size: 81.2500%;
+}
+.s19{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 81.2500%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 8.6102%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -8.6102%;
+}
+.s20{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 93.0000%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.7627%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -10.7627%;
+}
+.s21{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.8969%;
+	margin-top: 3.5876%;
+	padding-left: 12.9153%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -12.9153%;
+	text-transform: none;
+}
+.s22{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 10.5983%;
+	padding-right: 0.0000%;
+	text-align: justify;
+	text-indent: -10.5983%;
+	text-transform: none;
+	white-space: normal;
+}
+.s23{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.8969%;
+	margin-top: 3.5876%;
+	text-align: left;
+	text-decoration: none;
+	text-transform: none;
+}
+.s24{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 92.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.8969%;
+	margin-top: 3.5876%;
+	padding-left: 12.9153%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-indent: -12.9153%;
+	text-transform: none;
+}
+.s25{
+	list-style: none;
+}
+.s26{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 125%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	text-decoration: none;
+	text-indent: -6.4576%;
+}
+.s27{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 100%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	text-decoration: none;
+	text-indent: -6.4576%;
+}
+.s28{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 100%;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	text-decoration: none;
+	text-indent: -8.6102%;
+}
+.c1{
+	color: #000000;
+}
+.c2{
+	font-weight: bold;
+}
+.c3{
+	color: #000000;
+	font-family: "Times New Roman";
+	font-size: 100.0000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	padding-right: 1.5%;
+}
+.c4{
+	font-style: italic;
+}
+
