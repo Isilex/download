@@ -1,6 +1,5 @@
 
 : IsilexLight is a Light CMS and XML Collaborative XML Databases Tool for managers.
-: Copyright (C) 2016 I-Def.
 :
 : IsilexLight is part of Isilex.
 :
