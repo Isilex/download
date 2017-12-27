@@ -1,3 +1,26 @@
 This repo contains archive files for Isilex (https://isilex.github.io/easy-xml)
 
 According to your configurations system, you can download an archive with/without java included.
+
+IsilexLite is available under License GPL v3. By downloading IsilexLite (c), You agree with conditions of License GPL v3.
+
+#HowTo Start my Server
+
+- First, create a Master Admin User. The Super User Key is "superisilex"
+- You can modify your Master Admin Password by clicking on - "WebSite" - menu Button.
+- You can create and publish new Databasesthrew" - WebSite" - menu Button. You will chose next which Database you wnt to publish.
+- If you wan to edit this Web Page Content, click on This Link, or Click the top Page Menu Button "Edit HTML".
+- Your site is now reachable on your personnal network, or via Web Access if your computer is connected
+- If you want edit your first XMl File, click on the Editor Menu Button on the ruler upperside (Add) or on the AddXml Menu Button. Input Right XML File[1].
+- You can create a new DataBase. "Members" allow you to edit your users policy.
+- [1] XSD and DTD are XML Files Descriptors. Isilex comes with two XSD descriptors and delivers two TEI modules.
+
+1.0 : Basex 7.8 
+1.1 : IsiCorpus available 
+1.2 : Basex8.6.4 + easy XML Mask Editor  
+1.2.1: fix minor bug editions   
+1.2.2: new: online CSS Editor   
+1.2.3b :      
+- Correcting Forum ignition Bug      
+- Correcting Index Builder problem (much more quick and easy)     
+ - Correcting « Next arrow » behavior when reaching end list
