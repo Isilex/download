@@ -47,9 +47,3 @@ already have a private domain name, IsilexLight is reachable at:
 CoWorkers can connect and collaborate. 
 
 If you're running a firewall, don't forget toopen UP/DOWN UDP/TCP on port: 8984 and 8985.
-
-Gain visibility:
-----------------
-
-If you want Isilex becoming your master Web Site, easy solutions can be applied.
-you can contact IsilexTeam at: i-def@i-def.fr or via our forum : http://www.isilex.fr
