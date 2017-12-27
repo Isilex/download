@@ -1,5 +1,7 @@
 This repo contains archive files for Isilex (see documentation at https://isilex.github.io/easy-xml)
 
+Isilex is based on BaseX (http://www.basex.org) XML Databasemanager. You will find Basex JAR into "lib" directory.
+
 According to your configurations system, you can download an archive with/without java included.
 
 IsilexLite is available under License GPL v3. By downloading IsilexLite (c), You agree with conditions of License GPL v3.
