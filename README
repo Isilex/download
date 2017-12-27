@@ -4,7 +4,19 @@ Isilex is based on BaseX (http://www.basex.org) XML Databasemanager. You will fi
 
 According to your configurations system, you can download an archive with/without java included.
 
-IsilexLite is available under License GPL v3. By downloading IsilexLite (c), You agree with conditions of License GPL v3.
+Structure of Directories is as is:
+
+--> DATA: where basex stores databases
+--> LAUNCHER: where we saved our java launcher for each OS
+--> LIB: where Basex and Jetty Libs are
+--> REPO/fr/isilex/www: where Common XQuery Repository is
+--> WEBAPP: where XQuery application is stored. 
+     --> fullLiteC.xqm : all the system based app
+     -->fullLiteM.xqm : the XML Mask editor
+     -->Additional.xqm : where you should put you stuff
+         --> static : where we put all our static things such ass additonal editors (tinymce) and CSS 
+
+IsilexLite is available under License GPL v3. By downloading IsilexLite, You agree with conditions of License GPL v3.
 
 #HowTo Start my Server
 
