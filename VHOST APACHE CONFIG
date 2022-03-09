@@ -1,8 +1,8 @@
 If you need multiple instances for one basex on an Apache server here is the vhost.conf file:
 <VirtualHost *:80>
-       ServerAdmin xxxxxxx
+        ServerAdmin xxxxxxx
         ServerName www.xxxxxxxxx.fr
-	      ProxyPreserveHost On
+	ProxyPreserveHost On
         ProxyRequests off
         ProxyPass / http://194.254.168.33:81/xxxxx/
         ProxyPassReverse / http://194.254.168.33:81/xxxxxx/
