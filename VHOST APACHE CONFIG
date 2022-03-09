@@ -10,3 +10,4 @@ If you need multiple instances for one basex on an Apache server here is the vho
 
 
 - Please keep in mind all pathes of the xqm files need to match the xxxxxx URL
+- Keep in mind your repo file needs to be uploaded in a corresponding directory under the basex repo path
