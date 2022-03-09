@@ -41,12 +41,12 @@ function isilex:change-lang($lang,$back,$referer){
        else (
          insert node <lang>{$lang}</lang> into db:open('utilisateurs')/*/entry[.//id=session:id()]
        ),
-       db:output(<rest:redirect>{$referer}</rest:redirect>) 
+       update:output(web:redirect(""||$referer))) 
      }
      
      catch * {
        (
-       db:output(<rest:redirect>{$referer}</rest:redirect>)
+       update:output(web:redirect(""||$referer)))
        , 
        let $content := 'Error [' || $err:code || ']: ' || $err:description 
        return file:write(file:base-dir()||"/errorLangMin.txt", $content))}
@@ -61,12 +61,12 @@ function isilex:change-lang($lang,$back,$referer){
        insert node <visit><id>{session:id()}</id><timeStamp>{current-dateTime()}</timeStamp><lang>{$lang}</lang></visit> 
        into db:open('visits')/root
        ,
-       db:output(<rest:redirect>{$referer}</rest:redirect>)
+       update:output(web:redirect(""||$referer)))
    )
  }
  catch * {
    (
-   db:output(<rest:redirect>{$referer}</rest:redirect>)
+   update:output(web:redirect(""||$referer)))
    , 
    let $content := 'Error [' || $err:code || ']: ' || $err:description 
    return file:write(file:base-dir()||"/errorLang.txt", $content))}
@@ -78,9 +78,9 @@ declare
   %rest:path("")
   function isilex:start()
 { if (db:open('utilisateurs')//masteradmin) then
-  if (empty($isi:testLang)) then <rest:redirect>/change-lang</rest:redirect> else <rest:redirect>/accueil</rest:redirect>
+  if (empty($isi:testLang)) then web:redirect("/change-lang") else web:redirect("/accueil")
   else(
-    <rest:redirect>/masteradmin</rest:redirect>
+    web:redirect("/masteradmin")
   )
 };
 
@@ -89,9 +89,9 @@ declare
  %rest:path("/accueil")
   function isilex:vers-accueil() {
     if (db:open('utilisateurs')//masteradmin) then
-  <rest:redirect>/accueil/1</rest:redirect>
+  web:redirect("/accueil/1")
   else (
-    <rest:redirect>/masteradmin</rest:redirect>
+    web:redirect("/masteradmin")
   )
   };
 
@@ -321,7 +321,7 @@ declare
    else (),
    for $x in db:open('forum')/bdd/entry[bddId=$id] return delete node $x,
    for $x in db:open('forum')/bdd/entry[bddId=db:open($isi:bdd)//entry[./id=$id]//orth] return delete node $x,
-   db:output(<rest:redirect>/accueil</rest:redirect>)
+   update:output(web:redirect("/accueil")))
  };
  
 declare

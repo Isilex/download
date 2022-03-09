@@ -62,5 +62,5 @@ declare
    insert node <page><auteur>{db:open('utilisateurs')//entry[.//id=session:id()]/name/text()}</auteur><name></name><id></id><div>{$contenu}</div></page> into
    db:open('pages')/root
    else (),
-   db:output(<rest:redirect>/{$contenu}</rest:redirect>)
+   update:output(web:redirect("/"||$contenu)))
  };

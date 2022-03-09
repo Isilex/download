@@ -7,7 +7,7 @@ declare
   %rest:path("/delImage/{$name}")
   function isilex:delImg($name)
 {
-  db:output(<rest:redirect>/Images</rest:redirect>),
+  update:output(web:redirect("/Images"))),
   (
   for $x in db:open('images')/root/file[@new_name=$name]
   let $path := string(data($x/@path))
@@ -27,7 +27,7 @@ declare
   %rest:form-param("files", "{$files}")
   function isilex:upload($files)
 {
-  db:output(<rest:redirect>/Images</rest:redirect>),
+  update:output(web:redirect("/Images"))),
   for $name    in map:keys($files)
   let $content := $files($name)
   let $newName := replace(string(current-dateTime()),'([^:]*):([0-9]{2}):([0-9]{2}).*','$1-$2-$3') || '.' || string(replace($name,'[^\.]*\.(.*)','$1'))

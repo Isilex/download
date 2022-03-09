@@ -242,7 +242,7 @@ declare
   function isilex:createBdd($nomBase){
      (
     if ($nomBase!=db:list()) then
-     (db:output(<rest:redirect>/gere-site#stop</rest:redirect>)
+     (update:output(web:redirect("/gere-site#stop")))
      ,
      (
        db:create('bdd_'||$nomBase, file:base-dir()||'static/root/root.xml')
@@ -262,7 +262,7 @@ declare
 %rest:path('/removeGroup-{$group}')
    %updating
  function isilex:trashgroup($group){
-   (db:output(<rest:redirect>/gere-site#stopGroup</rest:redirect>),
+   (update:output(web:redirect("/gere-site#stopGroup"))),
     (for $x in db:open('site')//masterGroups/name[.=$group] return delete node $x
     ,
      for $x in db:open('utilisateurs')//matserGroup/name[.=$group] return replace value of node $x with ''
@@ -278,7 +278,7 @@ declare
   function isilex:trashBdd($nomTrash){
      (
     if ($nomTrash=db:list()) then
-     (db:output(<rest:redirect>/gere-site#stop</rest:redirect>),db:drop($nomTrash))
+     (update:output(web:redirect("/gere-site#stop"))),db:drop($nomTrash))
     else ()
  )
   };
@@ -291,7 +291,7 @@ declare
  %rest:form-param("bddDb","{$bdd}","")
   function isilex:db2Group($group, $bdd){
 
-    db:output(<rest:redirect>/gere-site#stopGroup</rest:redirect>),
+    update:output(web:redirect("/gere-site#stopGroup"))),
     for $x in db:open('site')/root/masterGroups/name[.=$group] 
       return
         if ($x/@bdd)
@@ -322,7 +322,7 @@ declare
  function isilex:switchBdd($on)
  {
    (
-   db:output(<rest:redirect>/rubrique/A/1</rest:redirect>),
+   update:output(web:redirect("/rubrique/A/1"))),
    let $activeBdd := if ($on = '1') then 'bdd_isilex' else 'bdd'
    let $dtd := if ($on = '1') then 'off' else 'on'
    return
@@ -344,7 +344,7 @@ declare
  function isilex:switchBddPerso($name, $base)
  {
    (
-    db:output(<rest:redirect>/gere-users</rest:redirect>),
+    update:output(web:redirect("/gere-users"))),
    for $x in db:open('utilisateurs')//entry[./name=$name]/bdd return replace value of node $x with $base,
    if (not($base='bdd'))
    then
@@ -371,7 +371,7 @@ declare
  function isilex:masterGroupDef($name, $group)
  {
    
-    db:output(<rest:redirect>/gere-users</rest:redirect>),
+    update:output(web:redirect("/gere-users"))),
      for $x in db:open('utilisateurs')//entry[./name=$name]/masterGroup/name 
        return (replace value of node $x with $group), 
       for $x in db:open('utilisateurs')//entry[./name=$name] return replace value of node $x/bdd with data(db:open('site')/root/masterGroups/name[.=$group]/@bdd)
@@ -383,7 +383,7 @@ declare
 %rest:path('/switchCss-{$on}')
  function isilex:switchCSs($on)
  {
-    (db:output(<rest:redirect>/</rest:redirect>),
+    (update:output(web:redirect("/"))),
    let $css := if ($on = '02') then '02' else '01'
    return
    replace value of node db:open('site')/root/css with $css)
@@ -410,7 +410,7 @@ declare
  %rest:form-param("passwordMA","{$passwordMA}","")
  %rest:form-param("addMasterGroup","{$addMasterGroup}","")  
  function isilex:update-site($domaine-name,$domaine,$accueil,$footer,$user,$passs,$unoconv,$activeBdd,$tagCloud,$addMasterGroup,$faceBookIsi,$passwordMA,$twitterIsi,$googleIsi){
-   db:output(<rest:redirect>/gere-site</rest:redirect>),if ($isi:testid4) 
+   update:output(web:redirect("/gere-site"))),if ($isi:testid4) 
    then (
      if ($domaine-name != '') then replace value of node db:open('site')/root/domaine-name with $domaine-name else (),
      if ($domaine != '') then replace value of node db:open('site')/root/domaine with $domaine else (),
@@ -552,7 +552,7 @@ declare
  %updating
 %rest:path('/up-user/{$user=.+}/{$rang=.+}')
  function isilex:up-user($user as xs:string*,$rang as xs:string* ) {
-   db:output(<rest:redirect>/gere-users</rest:redirect>),
+   update:output(web:redirect("/gere-users"))),
    if (session:id()= db:open('utilisateurs')/utilisateurs/entry[masteradmin='true']//id and $rang=('user','admin','curator')) then
    for $i in db:open('utilisateurs')/utilisateurs/entry[name=$user]
    return replace value of node $i/usertype with $rang
@@ -564,7 +564,7 @@ declare
 %rest:path('/alphabet-{$on}')
  function isilex:up-user($on)
  {
-     db:output(<rest:redirect>/gere-site</rest:redirect>),
+     update:output(web:redirect("/gere-site"))),
      if ($isi:testid4) then
      for $x in db:open('site')/root/alphabet return replace value of node $x with $on
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -576,7 +576,7 @@ declare
 %rest:path('/alphabetC-{$on}')
  function isilex:erereer($on, $referer)
  {
-     db:output(<rest:redirect>{$referer}</rest:redirect>),
+     update:output(web:redirect(""||$referer))),
      for $x in db:open('site')/root/alphabet return replace value of node $x with $on
 
  };
@@ -586,7 +586,7 @@ declare
 %rest:path('/tiny-{$on}')
  function isilex:up-tiny($on)
  {
-     db:output(<rest:redirect>/gere-site</rest:redirect>),
+     update:output(web:redirect("/gere-site"))),
      if ($isi:testid4) then
      for $x in db:open('site')/root/tiny return replace value of node $x with $on
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -597,7 +597,7 @@ declare
 %rest:path('/forum-{$on}')
  function isilex:up-forum($on)
  {
-     db:output(<rest:redirect>/gere-site</rest:redirect>),
+     update:output(web:redirect("/gere-site"))),
      if ($isi:testid4) then
      for $x in db:open('site')/root/forum return replace value of node $x with $on
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -608,7 +608,7 @@ declare
 %rest:path('/masterAdminValidation-{$on}')
  function isilex:mAV($on)
  {
-     db:output(<rest:redirect>/gere-site</rest:redirect>),
+     update:output(web:redirect("/gere-site"))),
      if ($isi:testid4) then
      for $x in db:open('site')/root/masterAdminValidation return replace value of node $x with $on
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -619,7 +619,7 @@ declare
 %rest:path('/dtd-{$on}')
  function isilex:up-dtd($on)
  {
-     db:output(<rest:redirect>/gere-site</rest:redirect>),
+     update:output(web:redirect("/gere-site"))),
      if ($isi:testid4) then
      for $x in db:open('site')/root/dtd return replace value of node $x with $on
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -631,7 +631,7 @@ declare
 %rest:path('/cancelFiche-user_{$user}')
  function isilex:eraseUser($user)
  {
-     db:output(<rest:redirect>/gere-users</rest:redirect>),
+     update:output(web:redirect("/gere-users"))),
      if ($isi:testid4) then
      for $x in db:open('utilisateurs')//entry[name=$user] return delete node $x
      else db:output(isi:template(isi:t('unauthorized_access')))
@@ -643,7 +643,7 @@ declare
 %rest:path('/css-{$num}')
  function isilex:cssChange($num)
 { if ($isi:testid4) then(
-       db:output(<rest:redirect>/gere-site</rest:redirect>),
+       update:output(web:redirect("/gere-site"))),
      for $x in db:open('site')/root/css return replace value of node $x with $num)
      else db:output(isi:template(isi:t('unauthorized_access')))
 };
@@ -655,7 +655,7 @@ declare
 function isilex:ma(){
   if (db:open('utilisateurs')//masteradmin='true')
   then
-  (<rest:redirect>/</rest:redirect>)
+  (web:redirect("/"))
   else
   let $c :=
   <form method='POST' action='maup'>
@@ -689,7 +689,7 @@ function isilex:maup($username,$pass,$key,$mail,$pass2){
     then (insert node
     <entry><masteradmin>true</masteradmin><lang>en</lang><name>{$username}</name><mail>{$mail}</mail><password>{crypto:hmac($pass,'isilex','sha512','base64')}</password><usertype>administrator</usertype><sessions><session><id>{session:id()}</id><timeStamp>{current-dateTime()}</timeStamp></session></sessions></entry>
     as first into db:open('utilisateurs')/*,
-    db:output(<rest:redirect>/info?message=MasterAdminActivated</rest:redirect>)
+    update:output(web:redirect("/info?message=MasterAdminActivated")))
   )
     else db:output('Forbidden access')
   else db:output('Forbidden access')

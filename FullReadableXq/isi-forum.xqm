@@ -150,7 +150,7 @@ declare
 %rest:path("/forumEffacer-{$baseId}")
  function isilex:forumEffacer($baseId, $referer){
  (
-    db:output(<rest:redirect>{$referer}</rest:redirect>),
+    update:output(web:redirect(""||$referer))),
     for $x in db:open('forum')//entry[@id=$baseId] return delete node $x   
  )
  };
@@ -165,7 +165,7 @@ declare
   %rest:query-param('orig','{$orig}','')
  function isilex:forumAnswer($baseId, $texte, $auteur, $orig, $referer){
  (
- db:output(<rest:redirect>{$referer}</rest:redirect>),
+ update:output(web:redirect(""||$referer))),
     for $x in db:open('forum')//entry[@id=$baseId] 
     	return insert node 
     		<answer>
@@ -189,7 +189,7 @@ declare
  %rest:query-param('messTitre','{$messTitre}','')
  function isilex:saveMess($messText,$messId,$messBdd,$messAuthor,$messTitre){
   (
-    db:output(<rest:redirect>/fiche/{$messId}</rest:redirect>),
+    update:output(web:redirect("/fiche/"||$messId))),
     let $target := 
   <entry id="{
     if ((for $x in db:open('forum')//@id order by number($x) descending return number($x))[1]=1) then (for $x in db:open('forum')//@id order by number($x) descending return number($x))[1] + 1 else 1

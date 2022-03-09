@@ -258,7 +258,7 @@ declare
  %rest:form-param("cc","{$cc}","")
  %rest:form-param("mess","{$mess}","")
  function isilex:sendMessBdd($from, $to, $subject, $cc, $mess){
-    db:output(<rest:redirect>/accueil</rest:redirect>),
+    update:output(web:redirect("/accueil"))),
     isi:storeMessage($from, $mess, $to, $subject, $cc)
  };
 
@@ -268,7 +268,7 @@ declare
  %rest:POST
  %rest:form-param("id","{$id}","")
   function isilex:delmess($id) {
-     db:output(<rest:redirect>/readMail</rest:redirect>),
+     update:output(web:redirect("/readMail"))),
      for $x in db:open('messages')//entry[@id=$id] return delete node $x
   };
   
@@ -276,6 +276,6 @@ declare
  %updating
  %rest:path('/readMail')
  function isilex:markread() {
-    db:output(<rest:redirect>/readMailBdd</rest:redirect>),
+    update:output(web:redirect("/readMailBdd"))),
     for $x in db:open('messages')//entry[not(./read)] return insert node <read/> into $x
  };

@@ -65,15 +65,15 @@ declare
  %rest:form-param('rmdp','{$rmdp}','')
  function isilex:registering($user,$mdp,$rmdp,$mail){
    if ($isi:testid)
-   then db:output(<rest:redirect>/user/{$isi:name}</rest:redirect>)
+   then update:output(web:redirect("/user/"||$isi:name)))
    else
    if ($user != '' and $user !=db:open('utilisateurs')/utilisateurs/entry/name) then
      if ($mail='' or not(matches($mail,'^.+@.+\..+')) or $mail = db:open('utilisateurs')/utilisateurs/entry/mail)
      then
-       db:output(<rest:redirect>/register?message={web:encode-url(isi:t('invalid_mail'))}</rest:redirect>)
+       update:output(web:redirect("/register?message="||web:encode-url(isi:t('invalid_mail')))))
      else
        if ($mdp = '' or $mdp!=$rmdp) 
-       then db:output(<rest:redirect>/register?message=Mot de passe vide ou non semblable</rest:redirect>) 
+       then update:output(web:redirect("/register?message=Mot de passe vide ou non semblable"))) 
        else 
          if ($mdp=$rmdp and $mdp != '') 
          then (insert node 
@@ -89,12 +89,12 @@ declare
          <masterGroup>
            <name></name>
          </masterGroup>
-       </entry> into db:open('utilisateurs')/utilisateurs,db:output(<rest:redirect>/user/{$user}</rest:redirect>))
+       </entry> into db:open('utilisateurs')/utilisateurs,update:output(web:redirect("/user/"||$user))))
          else db:output(
-           <rest:redirect>/register?message={web:encode-url(isi:t('invalid_password'))}</rest:redirect>)
+           web:redirect("/register?message="||web:encode-url(isi:t('invalid_password'))))
          
    else (db:output(
-           <rest:redirect>/register?message={web:encode-url(isi:t('invalid_username'))}</rest:redirect>
+           web:redirect("/register?message="||web:encode-url(isi:t('invalid_username')))
          )
    )
 };
@@ -164,5 +164,5 @@ declare
    for $i in db:open('visits')//id[.!=sessions:ids()]
        return delete node $i
    ,
-   db:output(<rest:redirect>/</rest:redirect>)
+   update:output(web:redirect("/")))
 };

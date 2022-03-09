@@ -7,7 +7,7 @@ declare
  %updating
  %rest:path('/validFiche/{$bddAsk}/{$fiche=.+}')
  function isilex:validTrue($fiche,$bddAsk){
-   db:output(<rest:redirect>/valid/{$bddAsk}/1</rest:redirect>),
+   update:output(web:redirect("/valid/"||$bddAsk||"/1"))),
    if (
      exists(db:open($bddAsk)/*/fiche[./id=$fiche]/valid) and $isi:testid2
    ) 
@@ -26,10 +26,10 @@ declare
    then 
      if (matches($fiche,'user_') ) 
      then(
-       db:output(<rest:redirect>/valid/{$bddAsk}/1</rest:redirect>),
+       update:output(web:redirect("/valid/"||$bddAsk||"/1"))),
        delete node db:open('utilisateurs')/utilisateurs/entry[not(masteradmin='true')][./name=replace($fiche,'user_','')])
      else(
-       db:output(<rest:redirect>/valid/{$bddAsk}/1</rest:redirect>),
+       update:output(web:redirect("/valid/"||$bddAsk||"/1"))),
        delete node db:open($bddAsk)/*/fiche[./id=$fiche]
      )
    else db:output(isi:template(isi:t('unauthorized_access')))

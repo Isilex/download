@@ -68,7 +68,7 @@ declare
   function isilex:cssSave($css, $file){
     let $filePath := file:base-dir()||'static/CSS/03/'||$file||'.css'
     return
-     (db:output(<rest:redirect>/edit-{$file}</rest:redirect>)
+     (update:output(web:redirect("/edit-"||$file)))
    ,
      file:write($filePath,$css,map { "method": "text"})
      )

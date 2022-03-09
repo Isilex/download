@@ -67,7 +67,7 @@ height: 300,
  %rest:query-param('node','{$node}','')
  function isilex:modpaTn($lg,$idPage,$node,$titre)
  { try { 
-     db:output(<rest:redirect>pageHTML-{$lg}-{$idPage}</rest:redirect>),
+     update:output(web:redirect("pageHTML-"||$lg||"-{$idPage}"))),
 		if($isi:testid2) 
 		 then 
 			if (db:open('pages')//page[name=$idPage]) 
@@ -145,7 +145,7 @@ declare
  function isilex:modpa($lg, $idPage,$node)
  {
     try { 
-     db:output(<rest:redirect>/</rest:redirect>),
+     update:output(web:redirect("/"))),
 		if($isi:testid2) 
 		 then 
 		 	if (db:open('site')//texts[name=$idPage]/text[@lang=$lg]) 
@@ -161,7 +161,7 @@ declare
 		 		else if (not(fetch:xml(normalize-space($node), map{'chop': true()})//name = ('','Titre de la page','Page title','Nom','Name'))) 
 		 		then 
 		 			insert node html:parse(normalize-space($node), map{'nons': true()}) into db:open('pages')/root 
-		 		else db:output(<rest:redirect>/err:save</rest:redirect>) else db:output(isi:template(isi:t('unauthorized_access'))) 
+		 		else update:output(web:redirect("/err:save"))) else db:output(isi:template(isi:t('unauthorized_access'))) 
 		 } catch * { fn:error(xs:QName('err:save'), $node) } };
  
  
@@ -173,7 +173,7 @@ declare
  function isilex:del-page($id){
    if ($isi:testid3)
    then (
-     delete node db:open('pages')/root/page[name=$id],db:output(<rest:redirect>gere-site</rest:redirect>)
+     delete node db:open('pages')/root/page[name=$id],update:output(web:redirect("gere-site")))
      )
    else (db:output(isi:template('unauthorized_access')))
  };

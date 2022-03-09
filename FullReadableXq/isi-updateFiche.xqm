@@ -49,7 +49,7 @@ function isilex:saveNew($inputFiche,$valid){
         if (empty($validate) and not(matches($entry,'Non XMLisable')))
         then(
           insert node $fiche into db:open($isi:bdd)/*,
-          db:output(<rest:redirect>/modif-{$id}?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e</rest:redirect>)
+          update:output(web:redirect("/modif-"||$id||"?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e")))
         )
         else (
           db:output("Erreur: COPIER VOTRE TRAVAIL : " || $entry || $inputFiche)
@@ -123,14 +123,14 @@ function isilex:saveFiche($inputFiche,$id,$valid,$bddId){
     )
     then (
       replace node db:open($isi:bdd)/*/fiche[id=$id] with $fiche,
-       db:output(<rest:redirect>/modif-{$id}?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e</rest:redirect>)
+       update:output(web:redirect("/modif-"||$id||"?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e")))
       
       (:/modif-{$id}?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e
-      db:output(<rest:redirect>/xsdOk-{$id[1]}</rest:redirect>) :)
+      update:output(web:redirect("/xsdOk-"||$id[1]))) :)
     )
     else (
       (:
-      db:output(<rest:redirect>/xsdPb-{$id[1]}-{string($validate[1])}</rest:redirect>)
+      update:output(web:redirect("/xsdPb-"||$id[1]||"-{string($validate[1])}")))
     :)
     db:output(isi:template(($entry,$inputFiche)))
   )
@@ -209,7 +209,7 @@ function isilex:validateFicheXsdReturnResponse($fiche,$xsd){
   if (isi:validateXML((db:open($isi:bdd)//fiche[./id=$id]/entry)[1])='Le document est conforme') 
     
    then
-    (db:output(<rest:redirect>/modif-{data($id)}</rest:redirect>),
+    (update:output(web:redirect("/modif-"||data($id)))),
 
      if (not(db:open($isi:bdd)//entry[../id=$id]//mark))
      then
@@ -235,7 +235,7 @@ function isilex:validateFicheXsdReturnResponse($fiche,$xsd){
       else ()
        )
        else  
-       (db:output(<rest:redirect>/validShow</rest:redirect>)
+       (update:output(web:redirect("/validShow")))
        ,
         insert node 
           <entry>

@@ -85,7 +85,7 @@ declare
    %rest:form-param("titreCorpus", "{$titreCorpus}")
   function isilex:uploadCorp($files,$titreCorpus, $ligneOnOff)
 {
-  db:output(<rest:redirect>/createDbCorp-{$titreCorpus}-{if (not($ligneOnOff='1')) then 0 else 1}</rest:redirect>),
+  update:output(web:redirect("/createDbCorp-"||$titreCorpus||"-{if (not($ligneOnOff='1')) then 0 else 1}"))),
   for $name in map:keys($files)
   let $content := $files($name)
   let $newName := replace(string(current-dateTime()),'([^:]*):([0-9]{2}):([0-9]{2}).*','$1-$2-$3') || '.' || string(replace($name,'[^\.]*\.(.*)','$1'))
@@ -105,7 +105,7 @@ declare
   function isilex:createDbCorp($titreCorpus,$ligneOnOff)
   {  
      ( 
-       db:output(<rest:redirect>/insertDbCorp-{$titreCorpus}-{$ligneOnOff}</rest:redirect>),
+       update:output(web:redirect("/insertDbCorp-"||$titreCorpus||"-{$ligneOnOff}"))),
        db:create('bdd_corpus_' || $titreCorpus, <bdd/>,'doc.xml',map {'ftindex': true(), 'stemming': true()})
      )
   };
@@ -116,7 +116,7 @@ declare
   function isilex:insertDbCorp($titreCorpus, $mode)
   {  
      ( 
-       db:output(<rest:redirect>/traiteCorpuXml-{$titreCorpus}-10</rest:redirect>),
+       update:output(web:redirect("/traiteCorpuXml-"||$titreCorpus||"-10"))),
        let $fileList := (for $x in db:open('bdd_corp')//file[./@titreCorpus=$titreCorpus] return <f name='{data($x/@new_name)}' place='{data($x/@path)}'>{data($x/@orig_name)}</f>)
    for $files at $countf in $fileList
     let $file := data($files/@place)||'/'|| data($files/@name)
@@ -197,7 +197,7 @@ declare
  %rest:form-param("inputFiche", "{$fiche}")
  function isilex:sauveXmlCorp($fiche, $titreCorpus){
  (
-       db:output(<rest:redirect>/traiteCorpuXml-{$titreCorpus}-10</rest:redirect>),
+       update:output(web:redirect("/traiteCorpuXml-"||$titreCorpus||"-10"))),
     let $db := 'bdd_corpus_' || $titreCorpus
     let $txt := '<t>'|| $fiche||'</t>'
     let $node :=  html:parse((normalize-space($txt)))
