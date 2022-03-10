@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -19,14 +21,14 @@ declare function isilex:fic_to_masque($fic,$n){
 for $node at $d in $fic
   return 
   if ($node/name()=('id','valid','auteur') ) then () else
-  <div style="{if ($node/name()='entry') then (if ($node/*) then('background-color:#cfd8dc;') else ()) else 'background-color:white;'}display: block;flex-direction:column; justify-content:center;margin:6px; padding:3px;
+  <div style="{if ($node/name()='entry') then (if ($node
   " 
         id="A{$n}{$node/name()}.{$d};" 
         n='{$n}{$node/name()}.{$d};' 
-        class='{if ($node/*) then "separator" else ()}' >
-        <div style="{if (not ($node/*)) then ('display:flex;background-color:#eceff1;border-style:none;') else ()}">
-        <div style='margin:5px; width:5.5em'>{if ($node/name()='entry') then () else concat(upper-case(substring($node/name(),1,1)),substring($node/name(),2),if ($node/*)then () else ' : ')}</div>
-        <div >{if(not($node/*))then 
+        class='{if ($node
+        <div style="{if (not ($node
+        <div style='margin:5px; width:5.5em'>{if ($node/name()='entry') then () else concat(upper-case(substring($node/name(),1,1)),substring($node/name(),2),if ($node
+        <div >{if(not($node
           if ($node/name()='def') then (
             <textarea   style="width:360px; margin:4px;"   n="{$n}{$node/name()}.{$d};"                     
                        onkeyup="var id = document.activeElement.getAttribute('n');champsActu();" 
@@ -66,7 +68,7 @@ for $node at $d in $fic
                                " value='{$node/text()}'></input> 
                                
                                else (
-                                 isilex:fic_to_masque($node/*,concat($n,$node/name(),'.',$d,';'))
+                                 isilex:fic_to_masque($node
                                )}</div>
                                
                 </div>
@@ -79,27 +81,27 @@ declare function isilex:fic_to_template($fic,$n){
 for $node at $d in $fic
   let $id := concat($n,$node/name(),'.',$d,';')
   return 
-  element{$node/name()}{attribute id {$id},for $i in $node/@* return attribute{$i/name()}{$i/data()},isilex:fic_to_template($node/*,$id),$node/text()}
+  element{$node/name()}{attribute id {$id},for $i in $node/@* return attribute{$i/name()}{$i/data()},isilex:fic_to_template($node
 };
 
 declare function isilex:ele_gen($xsd){
   for $i in $xsd return if ($i/name()='xs:element') then
 
-  element {$i/@name} {for $att in $i/xs:complexType/xs:attribute return attribute {$att/@name}{data($att)},isilex:ele_gen($i/*)}
-  else if ($i/*) then (isilex:ele_gen($i/*)) else ()
+  element {$i/@name} {for $att in $i/xs:complexType/xs:attribute return attribute {$att/@name}{data($att)},isilex:ele_gen($i
+  else if ($i*)) else ()
 };
 
 declare function isilex:js($node,$id,$cp){
   let $save := concat('tr = document.createElement("tr");td = document.createElement("td");var t = document.createTextNode("FIN ',$node/name(),'");td.appendChild(t);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);')
   let $n := concat('var ',$node/name(),' = document.createElement("',$node/name(),'");',$node/name(),'.setAttribute("id",',$cp,');',if($node/@*) then for $attr in $node/@* return concat($node/name(),'.setAttribute("',$attr/name(),'","',data($attr),'");') else ())
-  let $ppch := if($node/*) then concat('tr = document.createElement("tr");td = document.createElement("td");var t = document.createTextNode("FIN',$node/name(),'");td.appendChild(t);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);',$cp,'++;') else()
-  let $pch := if($node/*) then () else concat('tr = document.createElement("tr");td = document.createElement("td");td.setAttribute("class","masqueSaisieCourt");var t = document.createTextNode("',$node/name(),'");td.appendChild(t);tr.appendChild(td); td = document.createElement("td");input=document.createElement("input");input.setAttribute("n",cp);input.setAttribute("onkeyup","champToXml();");input.setAttribute("type","text");input.setAttribute("class","xsd admin");input.setAttribute("onClick","',"champToXml() ",'");td.appendChild(input);tr.appendChild(td);td = document.createElement("td"); a =document.createElement("a");var t = document.createTextNode("X");a.setAttribute("class","button");a.setAttribute("n",cp);a.setAttribute("onClick","clearCh();");a.appendChild(t); td.appendChild(a);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);',$cp,'++;')
+  let $ppch := if($node
+  let $pch := if($node
   let $attch := for $att in $node/@* return concat('tr = document.createElement("tr");td = document.createElement("td");td.setAttribute("class","masqueSaisieCourt");var t = document.createTextNode("',$att/name(),'");td.appendChild(t);tr.appendChild(td); td = document.createElement("td");input=document.createElement("input");input.setAttribute("n",cp);input.setAttribute("name","',$att/name(),'");input.setAttribute("onkeyup","champToXmlA();");input.setAttribute("type","text");input.setAttribute("class","xsd admin");input.setAttribute("onClick","',"champToXmlA() ",'");td.appendChild(input);tr.appendChild(td);td = document.createElement("td"); a =document.createElement("a");var t = document.createTextNode("X");a.setAttribute("class","button");a.setAttribute("n",cp);a.setAttribute("onClick","clearCh();");a.appendChild(t); td.appendChild(a);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);')
-  let $fch := if($node/*) then concat('tr = document.createElement("tr");td = document.createElement("td");var t = document.createTextNode("',$node/name(),'");td.appendChild(t);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);') else ()
+  let $fch := if($node
   let $ch := 
-    for $i at $c in $node/* 
+    for $i at $c in $node
     return isilex:js($i,$id,($cp))
-  let $add := for $i in $node/* return concat($node/name(),'.appendChild(',$i/name(),');')
+  let $add := for $i in $node
   return ($n,$ppch,$ch,$attch,$pch,$fch,$add)
 };
 
@@ -107,20 +109,20 @@ declare function isilex:div($node,$id,$cp,$c){
   
   let $save := concat('tr = document.createElement("div");td = document.createElement("div");var t = document.createTextNode("FIN ',$node/name(),'");td.appendChild(t);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);')
   let $n := concat('var ',$node/name(),' = document.createElement("',$node/name(),'");',$node/name(),'.setAttribute("id",',$cp,');',if($node/@*) then for $attr in $node/@* return concat($node/name(),'.setAttribute("',$attr/name(),'","',data($attr),'");') else ())
-  let $ppch := if($node/*) then concat('tr = document.createElement("div");td = document.createElement("div");var t = document.createTextNode("FIN',$node/name(),'");td.appendChild(t);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);',$cp,'++;') else()
-  let $pch := if($node/*) then () else concat('var tr = document.createElement("div"); tr.setAttribute("style","display: flex; justify-content:center;margin:18px; padding:10px;"); var td = document.createElement("div"); td.setAttribute("class","masqueSaisieCourt"); var t = document.createTextNode("',$node/name(),'"); td.appendChild(t); td.setAttribute("style","padding:5px;"); tr.appendChild(td); td = document.createElement("div"); var input=document.createElement("input"); input.setAttribute("n",cp); input.setAttribute("onkeyup","champToXml();"); input.setAttribute("type","text"); input.setAttribute("class","xsd admin"); input.setAttribute("onClick","',"champToXml(); ",'"); td.appendChild(input); tr.appendChild(td); td = document.createElement("div"); td.setAttribute("style","padding-left:8px;"); a =document.createElement("a");var t = document.createTextNode("Clear");a.setAttribute("class","button");a.setAttribute("n",cp);a.setAttribute("onClick","clearCh(this);");a.appendChild(t); td.appendChild(a);tr.appendChild(td);','mnode','.appendChild(tr);',$cp,'++;')
+  let $ppch := if($node
+  let $pch := if($node
   let $attch := for $att in $node/@* return concat('tr = document.createElement("div");td = document.createElement("div");td.setAttribute("class","masqueSaisieCourt");var t = document.createTextNode("',$att/name(),'");td.appendChild(t);tr.appendChild(td); td = document.createElement("div");input=document.createElement("input");input.setAttribute("n",cp);input.setAttribute("name","',$att/name(),'");input.setAttribute("onkeyup","champToXmlA();");input.setAttribute("type","text");input.setAttribute("class","xsd admin");input.setAttribute("onClick","',"champToXmlA() ",'");td.appendChild(input);tr.appendChild(td);td = document.createElement("div"); a =document.createElement("a");var t = document.createTextNode("X");a.setAttribute("class","button");a.setAttribute("n",cp);a.setAttribute("onClick","clearCh();");a.appendChild(t); td.appendChild(a);tr.appendChild(td);','temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(tr,temp);')
-  let $MainNode := if($node/*) then concat('mnode' ,'= document.createElement("div"); mnode','.setAttribute("style","border: 1px solid; justify-content:center;margin:8px; padding:8px;");','var t = document.createTextNode("',upper-case($node/name()),'"); mnode','.appendChild(t);') else ()
-  let$appendToMainNode := if($node/*) then
+  let $MainNode := if($node
+  let$appendToMainNode := if($node
   concat(
     'temp = document.getElementById(pa).nextElementSibling; par = document.getElementById(pa).parentNode; par.insertBefore(mnode',',temp);')
     else ()
   let $ch := 
-    for $i at $c in $node/* 
+    for $i at $c in $node
     return isilex:div($i,$id,($cp),$c+1)
-  let $add := for $i in $node/* return concat($node/name(),'.parentNode.appendChild(',$i/name(),');')
-  let $add2 := if ($c=1) then for $i in $node/* return concat('var nod = document.getElementById(fid);','var sibl = document.getElementById(fid).parentNode.nextElementSibling; var up =document.getElementById(fid).parentNode ; up.insertBefore(',$node/name(),',sibl);') else ()
-  let $add3 := if ($c!=1) then for $i in $node/* return concat('var nod = document.getElementById(cp);','var sibl = document.getElementById(cp).parentNode.nextElementSibling; var up =document.getElementById(cp).parentNode ; up.insertBefore(',$node/name(),',sibl);') else ()
+  let $add := for $i in $node
+  let $add2 := if ($c=1) then for $i in $node
+  let $add3 := if ($c!=1) then for $i in $node
   return ($n,$add2,$add3,$MainNode,$ch,$pch,if ($c=1) then $appendToMainNode else())
 };
 
@@ -132,12 +134,12 @@ for $i at $d in $fic[name()=$xsd/@name]
   return (element {$i/name()}{ 
   attribute id {$nc},$att,
   if(normalize-space(string-join($i/text()))) then $i/text() else (),
-  isilex:xsdfic($i/*,$xsd/*,$nc)
+  isilex:xsdfic($i*,$nc)
 }
 ),
 
 for $i at $d in $fic[name()=$xsd/@ref]
-  return isilex:xsdfic($fic,$xsd/ancestor::*[last()]/*[@name=$i],$n)
+  return isilex:xsdfic($fic,$xsd/ancestor::*[last()]
 
 
 
@@ -153,18 +155,18 @@ case 'xs:element' return
   return (element {$i/name()}{ 
   attribute id {$nc},
   if(normalize-space(string-join($i/text()))) then $i/text() else (),
-  isilex:xsdfic($i/*,$x/*,$nc)
+  isilex:xsdfic($i*,$nc)
 }
 )
 :)
 case 'xs:complexType' return
-  isilex:xsdfic($fic,$x/*,$n)
+  isilex:xsdfic($fic,$x
     
 case 'xs:sequence' return
-  isilex:xsdfic($fic,$x/*,$n)
+  isilex:xsdfic($fic,$x
 
 case 'xs:choice' return
-  isilex:xsdfic($fic,$x/*,$n)
+  isilex:xsdfic($fic,$x
 
 default return ()
 
@@ -178,13 +180,13 @@ for $element in $xsd
 return switch ($element/name())
 
 case 'xs:complexType' return
-  isilex:chafic($fic,$element/*,$n)
+  isilex:chafic($fic,$element
 
 case 'xs:sequence' return
-  isilex:chafic($fic,$element/*,$n)
+  isilex:chafic($fic,$element
 
 case 'xs:choice' return
-  isilex:chafic($fic,$element/*,$n)
+  isilex:chafic($fic,$element
   
 
 
@@ -195,14 +197,14 @@ for $node at $d in $fic
     
     if ($node/name()=('id','valid','auteur','date')) then () else
 
-if (not($node/*) and $node/name()=$element/@name) then (
+if (not($node
   
   <div style="display: flex; justify-content:center;flex:column;margin:18px; padding:10px;" 
         id="A{$n}{$node/name()}.{$d};" 
         n='{$n}{$node/name()}.{$d};' 
-        class='{if ($node/*) then "separator" else ()}' >
+        class='{if ($node
         <div style='padding:5px;'>{$node/name()}</div>
-        <div>{if(not($node/*))then 
+        <div>{if(not($node
           <input      n="{$n}{$node/name()}.{$d};"                     
                        onkeyup="var id = document.activeElement.getAttribute('n');champToXmlA();champsActu();" 
                        class="xsd adminInput" 
@@ -243,7 +245,7 @@ if (not($node/*) and $node/name()=$element/@name) then (
                     add{$node/name()}(id,pa);"
                    style='flex:right;'>
                    </div>,
-                   isilex:chafic($node/*,$element[@name=$node/name()]/*,concat($n,$node/name(),'.',$d,';'))
+                   isilex:chafic($node*,concat($n,$node/name(),'.',$d,';'))
                    
                 }</div>
                 else ()

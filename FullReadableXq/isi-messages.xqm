@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';

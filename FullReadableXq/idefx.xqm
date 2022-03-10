@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace request = "http://exquery.org/ns/request";
@@ -31,14 +33,14 @@ declare
  isi:template(
    <div>
    {
-  let $countres := 0 (:Le compteur de résultats à afficher par pages:)
-  let $seuilmax := 50 (:Le nombre de résultats à afficher:)
+  let $countres := 0 
+  let $seuilmax := 50 
   let $google := 
 		   (
         for $y score $sc in db:open(
           $isi:bdd
         )//entry
-                    (:[./form/valid="true"]:) 
+                     
         (: 
         *****************************************************
         Activer ici pour limiter les recherches aux fiches qui auraient été validées par l'administrateur principal
@@ -139,7 +141,7 @@ declare
 				 ,
 				 for $i in (
               distinct-values(
-                $y//sense/*
+                $y//sense
               ),distinct-values(
                 $y//domaine
               )
@@ -220,7 +222,7 @@ declare
 			   </div>
 			   <div id="mentionsyno">
                            {
-           (:le seuil du résultat est 3500:)
+           
 			     if (
             number(
               $sc

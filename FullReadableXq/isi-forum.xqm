@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -59,12 +61,12 @@ declare
               <p>
                 <textarea id="areaTitreForum" 
                           name="messTitre" 
-                          placeHOlder="Your title on {(db:open($isi:bdd)/*/fiche/entry/form/orth)[1]}..." />
+                          placeHOlder="Your title on {(db:open($isi:bdd)
               </p>
               <p>
                 <textarea id="areaForum" 
                           name="messText" 
-                          placeHOlder="Your comment on {db:open($isi:bdd)/*/fiche/entry/form/orth}..." />
+                          placeHOlder="Your comment on {db:open($isi:bdd)
               </p>
               <input type="hidden" name="messBdd" value="{$isi:bdd}"/>
               <input type="hidden" name="messId" value="{$id}"/>
@@ -90,7 +92,7 @@ declare
                           </ul>
                         </div>
                     ,
-                      if ($isi:testid3 or $isi:testid4 or $isi:testidname=db:open($isi:bdd)/*/fiche[id=$id]/auteur) 
+                      if ($isi:testid3 or $isi:testid4 or $isi:testidname=db:open($isi:bdd)
                       then <a class="button" href="/forumEffacer-{data($x/@id)}">Effacer</a> 
                       else ()
                     ,

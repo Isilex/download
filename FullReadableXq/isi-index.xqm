@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -32,14 +34,14 @@ function isilex:change-lang($lang,$back,$referer){
    then
    
      try {
-       if (db:open('utilisateurs')/*/entry[.//id=session:id()]/lang)
+       if (db:open('utilisateurs')
        then
        for $i in db:open('utilisateurs')//entry[.//id=session:id()]/lang 
        return 
          replace node $i
          with <lang>{$lang}</lang>
        else (
-         insert node <lang>{$lang}</lang> into db:open('utilisateurs')/*/entry[.//id=session:id()]
+         insert node <lang>{$lang}</lang> into db:open('utilisateurs')
        ),
        update:output(web:redirect(""||$referer))) 
      }
@@ -149,13 +151,13 @@ declare
        if ($isi:testLang='fr') 
         then db:open('pages')/root/page[name='texteAccueil']/div[@lang='fr'] 
         else db:open('pages')/root/page[name='texteAccueil']/div[@lang='en']
-       (:Social network:)        
+               
        else
        let $indix := xs:integer($ind)
        for $indice in ($indix to $indix + 24) 
         return
          (
-         for $i at $count in db:open($isi:bdd)/*/fiche/entry
+         for $i at $count in db:open($isi:bdd)
         [not(.//orth='AJOUT')]
         order by  xs:dateTime($i/../creationDate) descending
              return 
@@ -270,7 +272,7 @@ declare
              }
         </div>)[$indice]
        )
-      )/*
+      )
 	}
 	{
 	if (db:open('site')/root/alphabet='off')

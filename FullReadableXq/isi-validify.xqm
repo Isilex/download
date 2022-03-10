@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -9,10 +11,10 @@ declare
  function isilex:validTrue($fiche,$bddAsk){
    update:output(web:redirect("/valid/"||$bddAsk||"/1"))),
    if (
-     exists(db:open($bddAsk)/*/fiche[./id=$fiche]/valid) and $isi:testid2
+     exists(db:open($bddAsk)
    ) 
    then
-     replace value of node db:open($bddAsk)/*/fiche[./id=$fiche]/valid with "true" 
+     replace value of node db:open($bddAsk)
    else ()
  };
 
@@ -30,7 +32,7 @@ declare
        delete node db:open('utilisateurs')/utilisateurs/entry[not(masteradmin='true')][./name=replace($fiche,'user_','')])
      else(
        update:output(web:redirect("/valid/"||$bddAsk||"/1"))),
-       delete node db:open($bddAsk)/*/fiche[./id=$fiche]
+       delete node db:open($bddAsk)
      )
    else db:output(isi:template(isi:t('unauthorized_access')))
  };
@@ -70,7 +72,7 @@ declare
       </div>
      {
       let $contenu := 
-        for $x in db:open($isi:bdd)/*/fiche[id=$fiche]/entry 
+        for $x in db:open($isi:bdd)
         return $x
       return
         if (
@@ -107,12 +109,12 @@ declare
     </p>
     <div id="listeDesMots">{
       if (
-        for $fiches in db:open($bddAsk)/*/fiche[number(./id)>1][./valid='ask']
+        for $fiches in db:open($bddAsk)
         return $fiches
       ) 
       then
         <ul>{
-          for $fiches in db:open($bddAsk)/*/fiche[number(./id)>1][./valid='ask']
+          for $fiches in db:open($bddAsk)
           return 
             <li style="display:block; clear:both;">
               <a class='button' href="/valid/{$bddAsk}/{$fiches/id}" style=" float:left; margin-right: 3px; width: 80px;">{
@@ -128,8 +130,8 @@ declare
       else "Liste: Rien à Valider"
     }</div>
     <div id="controleXml">{
-        if (db:open($bddAsk)/*/fiche[number(./id)>1][./valid='ask']) 
-          then for $x in db:open($bddAsk)/*/fiche[./id=$fiche]/entry return $x 
+        if (db:open($bddAsk)
+          then for $x in db:open($bddAsk)
           else "XML: Rien à afficher"
     }</div>
   </div>

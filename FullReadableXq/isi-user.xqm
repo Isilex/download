@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -10,7 +12,7 @@ declare
    then
      let $contenu :=(
        <h2>Vos fiches</h2>,
-       <l>{for $i in distinct-values(db:open($isi:bdd)/*/fiche[auteur=$isi:name]/entry//orth)[not(matches(.,"AJOUT"))]
+       <l>{for $i in distinct-values(db:open($isi:bdd)
        return <li class="maListeDeFiches"><a href='/fiche/{$i}'>{upper-case($i)}</a></li>}</l>
      )
      return

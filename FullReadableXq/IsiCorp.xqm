@@ -1,8 +1,10 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
 
-(:CORPUS:)
+
 declare
  %rest:path('/listeCorpus')
  %output:method('xhtml')
@@ -230,7 +232,7 @@ if (matches($motif,' [a-z0-9]')) then <r>
 <th>Ecart</th><th>Score</th>
 {for $i in (-4 to 11) return <th>{$i}</th>}
 {
-for $x in db:open($db)/*
+for $x in db:open($db)
  let $source := ft:tokenize($x)
 
  let $ind:=
@@ -276,7 +278,7 @@ Levenshtein: {if ($fuzzy = 'on') then 'activé' else 'désactivé'}
 <table>
 {for $i in (-4 to 4) return <th>{$i}</th>}
 {
-for $x in db:open($db)/*
+for $x in db:open($db)
  let $source := ft:tokenize($x)
 
  for $m in ($indexes)

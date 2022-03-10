@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -12,8 +14,8 @@ declare
   let $contenu :=
      if (upper-case($path) != 'FORUMISILEX')
      then 
-       if (db:open($isi:bdd)/*/fiche[id=$path]/entry or db:open($isi:bdd)/*/fiche[upper-case((entry//orth)[1])=upper-case($path)]/entry)
-       (:On teste sur l'ID OU la vedette:)
+       if (db:open($isi:bdd)fiche[upper-case((entry//orth)[1])=upper-case($path)]/entry)
+       
        then (
          if ($isi:testid3 or $isi:testid4)
          then
@@ -32,24 +34,24 @@ declare
          ,
           <a style="padding-left: 10px;" href="/odt-pdf-{$path}" class=""><img class='zoom' width='35px' src='/static/images/32907.png'/></a> 
          ,
-         if (db:open($isi:bdd)/*/fiche[id=$path]/entry) 
-           then db:open($isi:bdd)/*/fiche[id=$path]/entry
-           else if (db:open($isi:bdd)/*/fiche[upper-case(entry//orth)=upper-case($path)])
-            then db:open($isi:bdd)/*/fiche[upper-case(entry//orth)=upper-case($path)]/entry
+         if (db:open($isi:bdd)
+           then db:open($isi:bdd)
+           else if (db:open($isi:bdd)
+            then db:open($isi:bdd)
            else ()
-           (:On teste sur les ID ou les VEDETTES MERCI !:)
+           
        ) 
        else (
          if (not($path="FORUM")) 
          then <a class='button' href='{ if ($isi:testid2) then "/modif-{$path}" else "/login"}'>Modifier</a> 
          else ()
          ,
-         if (db:open($isi:bdd)/*/fiche[id=$path]/entry) 
-           then db:open($isi:bdd)/*/fiche[id=$path]/entry
-           else if (db:open($isi:bdd)/*/fiche[upper-case(entry//orth)=upper-case($path)])
-            then db:open($isi:bdd)/*/fiche[upper-case(entry//orth)=upper-case($path)]/entry
+         if (db:open($isi:bdd)
+           then db:open($isi:bdd)
+           else if (db:open($isi:bdd)
+            then db:open($isi:bdd)
            else ()
-           (:On teste sur les ID ou les VEDETTES MERCI !:)
+           
        )
      else <entry>Le lieu de parler d &#x00027; Isilex</entry>
 
@@ -60,7 +62,7 @@ return
     isi:template(      
       (      
       <div id="cp" style='display:none'></div>,
-      (:**********Si lien ou image afficher en haut de la fiche*********:)
+      
       if ($contenu//note//@src contains text 'http://' or $contenu//note//@href contains text 'http://') 
       then 
         for $x at $counter in (($contenu//note//@src), ($contenu//note//@href))[. contains text 'http://']
@@ -195,7 +197,7 @@ return
           </div>
         else ()
       
-      (:************Fin affiche lien**********:)
+      
       ,
       
       
@@ -252,12 +254,12 @@ return
               <p>
                 <textarea id="areaTitreForum" 
                           name="messTitre" 
-                          placeHOlder="Your title on {(db:open($isi:bdd)/*/fiche/entry/form/orth)[1]}..." /> <!-- la page FORUM -->
+                          placeHOlder="Your title on {(db:open($isi:bdd)
               </p>
               <p>
                 <textarea id="areaForum" 
                           name="messText" 
-                          placeHOlder="Your comment on {db:open($isi:bdd)/*/fiche/entry/form/orth}..." />
+                          placeHOlder="Your comment on {db:open($isi:bdd)
               </p>
               <input type="hidden" name="messBdd" value="{$isi:bdd}"/>
               <input type="hidden" name="messId" value="{$path}"/>
@@ -283,7 +285,7 @@ return
                           </ul>
                         </div>
                     ,
-                      if ($isi:testid3 or $isi:testid4 or $isi:testidname=db:open($isi:bdd)/*/fiche[id=$path]/auteur) 
+                      if ($isi:testid3 or $isi:testid4 or $isi:testidname=db:open($isi:bdd)
                       then <a class="button" href="/forumEffacer-{data($x/@id)}">Effacer</a> 
                       else ()
                     ,

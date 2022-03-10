@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -126,7 +128,7 @@ import module namespace isi = 'http://www.isilex.fr/isi-repo';
     </tr>
     <tr>
       <td>{isi:t('footer')}</td>
-      <td><textarea class="adminInput" size='50' type='textarea' rows='4' placeHolder="{db:open('site')/*:root/*:footer-text/text()}" cols='60' name='footer' ></textarea></td>
+      <td><textarea class="adminInput" size='50' type='textarea' rows='4' placeHolder="{db:open('site')*:footer-text/text()}" cols='60' name='footer' ></textarea></td>
     </tr>
      <tr>
       <td>XSD on</td>
@@ -688,7 +690,7 @@ function isilex:maup($username,$pass,$key,$mail,$pass2){
     if(crypto:hmac($key,'isilex','sha512','base64')= db:open('site')/root/key and not (db:open('utilisateurs')//masteradmin='true'))
     then (insert node
     <entry><masteradmin>true</masteradmin><lang>en</lang><name>{$username}</name><mail>{$mail}</mail><password>{crypto:hmac($pass,'isilex','sha512','base64')}</password><usertype>administrator</usertype><sessions><session><id>{session:id()}</id><timeStamp>{current-dateTime()}</timeStamp></session></sessions></entry>
-    as first into db:open('utilisateurs')/*,
+    as first into db:open('utilisateurs')
     update:output(web:redirect("/info?message=MasterAdminActivated")))
   )
     else db:output('Forbidden access')

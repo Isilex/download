@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -125,7 +127,7 @@ declare
            if (db:open('pages')//page[name=$idPage])
            then
              for $x in db:open('pages')//page[name=$idPage] return $x
-           else db:open('site')/root/model[page/name='Nom']/*
+           else db:open('site')/root/model[page/name='Nom']
            
        }</textarea>
        </form>

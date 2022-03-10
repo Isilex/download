@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -37,7 +39,7 @@ declare
   <input type='submit' value='{isi:t('send')}' />
   </form> 
   else(), 
-  for $i in db:open('site')/*/page[(name,id)=$path]
+  for $i in db:open('site')
   return 
   <form method='post' action='/up-page' enctype="multipart/form-data">
   <textarea name='contenu' value='{$i/div/text()}'>{$i/div}</textarea> 

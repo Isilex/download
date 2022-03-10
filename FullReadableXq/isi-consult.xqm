@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -30,7 +32,7 @@ function isilex:rubrique-tout($nb){
              min-height: 100px;
              "
     >{
-    for $i in db:open($isi:bdd)/*/fiche[position()> 100*($nb -1)][position()<=100]
+    for $i in db:open($isi:bdd)*($nb -1)][position()<=100]
     order by ($i/entry/form/orth)[1]
     return
       <li class='index'
@@ -58,15 +60,15 @@ declare
     then (
       <h2>{isi:t('letter'),' ',$path}</h2>,
       <table>{
-       (:for $d in (1 to ($isi:di)) return:)
+       
        for $d in (xs:integer($indice) to xs:integer($indice) + 9) 
        return
        (
-       (for $i at $count in db:open($isi:bdd)/*/fiche
+       (for $i at $count in db:open($isi:bdd)
        [matches((entry/form/orth)[1],concat('^',$l),'i')]
        [some $o in entry/form/orth satisfies matches($o,concat('^',$l),'i')]
        [if ($isi:systemV='on') then valid='true' or auteur=$isi:name else valid] 
-       (:La restriction sur l'affichage si la validation est active:)
+       
        order by  xs:dateTime($i/creationDate) descending
        return 
          <tr>
@@ -89,7 +91,7 @@ declare
       ,
       <div id="dddd">{
         let $cnt := 
-          count(db:open($isi:bdd)/*/fiche
+          count(db:open($isi:bdd)
                 [matches(entry/form/orth,concat('^',$l),'i')]
                 [if ($isi:systemV='on') 
                  then valid='true' or valid='ask' or auteur=$isi:name 
@@ -126,7 +128,7 @@ declare
     else (
       <h2>Tags</h2>,
       <ul>{
-      for $i in db:open($isi:bdd)/*/fiche[tags/tag=$path] 
+      for $i in db:open($isi:bdd)
       return $i}
       </ul>
     )
@@ -146,10 +148,10 @@ isi:template(
   <div>    
   <h2>Categories</h2>
   {for $x in (
-  	distinct-values(db:open($isi:bdd)//@med[not(.='')]),(:vestige des premières DTD:)
+  	distinct-values(db:open($isi:bdd)//@med[not(.='')]),
   	distinct-values(db:open($isi:bdd)//@mod[not(.='')]), 
   	distinct-values(db:open($isi:bdd)//@dom[not(.='')]),
-  	distinct-values(db:open($isi:bdd)//usg[not(.='')])(:la CATEGORIE correspond à l'élément <usg/> de la fiche:)
+  	distinct-values(db:open($isi:bdd)//usg[not(.='')])
   	)
   order by $x
      return 

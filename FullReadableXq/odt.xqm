@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace request = "http://exquery.org/ns/request";
@@ -24,7 +26,7 @@ declare
                          ,<text:line-break/>
                          ,<text:p text:style-name="P1">{data($x//orth)}</text:p>
                          ,<text:line-break/>
-                         (:,<text:p text:style-name="P2">{string-join($x//form//text(),' ')}</text:p>:)
+                         
                          ,<text:line-break/>
                          ,<text:p text:style-name="P2">{string-join($x//gram//text(),' ')}</text:p>
                          ,<text:line-break/>
@@ -102,7 +104,7 @@ declare
         <zip:entry name="settings.xml" src="{concat($rep,'settings.xml')}"/>
         <zip:entry name="meta.xml" src="{concat($rep,'meta.xml')}"/>
       </zip:file>),
-      <a style="display:none;">{proc:execute($isi:unoconv||'/unoconv', $rep||$filename)}</a>,(:Pour exploiter UnoConv to Pdf, i faut que le chemin soit configuré dans l'interface du site:)
+      <a style="display:none;">{proc:execute($isi:unoconv||'/unoconv', $rep||$filename)}</a>,
       <h2>{isi:lang-text("xmlodt")} {upper-case(data(db:open($isi:bdd)//fiche[id=$id]//orth//text())[1])} ({$id})</h2>,
       <p>{isi:lang-text("DwnldRdy")}:</p>,
       if ($type='odt') 
@@ -173,7 +175,7 @@ declare
                          ,<text:line-break/>
                          ,<text:p text:style-name="P1">{data($x//orth)}</text:p>
                          ,<text:line-break/>
-                         (:,<text:p text:style-name="P2">{string-join($x//form//text(),' ')}</text:p>:)
+                         
                          ,<text:line-break/>
                          ,<text:p text:style-name="P2">{string-join($x//gram//text(),' ')}</text:p>
                          ,<text:line-break/>
@@ -264,7 +266,7 @@ let $content :=
     )
     
    ,
-   (:Création de l'archive finale:)
+   
    zip:zip-file(
         <zip:file xmlns="http://expath.org/ns/zip" href="{$rep||$zipName}">
         {
@@ -275,7 +277,7 @@ let $content :=
         </zip:file>)
   
    ,
-   (:Tout effacer:)
+   
    for $files in file:list($rep)[not(matches(.,'zip'))]
     return
      file:delete($rep||$files)

@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -48,7 +50,7 @@ function isilex:saveNew($inputFiche,$valid){
       
         if (empty($validate) and not(matches($entry,'Non XMLisable')))
         then(
-          insert node $fiche into db:open($isi:bdd)/*,
+          insert node $fiche into db:open($isi:bdd)
           update:output(web:redirect("/modif-"||$id||"?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e")))
         )
         else (
@@ -89,13 +91,13 @@ function isilex:saveFiche($inputFiche,$id,$valid,$bddId){
     <fiche>
       <valid>{if (db:open('site')/root/masterAdminValidation='on') then $valid else 'false'}</valid>
       {
-        (:C'est ici qu'on gère la sauvegarde des demaindes de validation:)
-        db:open($isi:bdd)/*/fiche[id=$id]/*[not(name()=('entry','valid'))]
+        
+        db:open($isi:bdd)*[not(name()=('entry','valid'))]
       }
       <modification>
         <modificationDate>{current-dateTime()}</modificationDate>
         <modifiedBy>{$isi:name}</modifiedBy>
-        <lastVersion>{db:open($isi:bdd)/*/fiche[id=$id]/entry}</lastVersion>
+        <lastVersion>{db:open($isi:bdd)
       </modification>
       {
         $entry
@@ -122,7 +124,7 @@ function isilex:saveFiche($inputFiche,$id,$valid,$bddId){
       and not(matches($entry,'Non XMLisable'))
     )
     then (
-      replace node db:open($isi:bdd)/*/fiche[id=$id] with $fiche,
+      replace node db:open($isi:bdd)
        update:output(web:redirect("/modif-"||$id||"?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e")))
       
       (:/modif-{$id}?message=Votre%20fiche%20a%20bien%20%C3%A9t%C3%A9%20sauv%C3%A9e
@@ -216,7 +218,7 @@ function isilex:validateFicheXsdReturnResponse($fiche,$xsd){
        let $f := for $x in db:open($isi:bdd)//entry[../id=$id] return $x
        let $a := distinct-values(for $x in $f/descendant::* return data(node-name($x)))
         return
-        for $x in $f//*[node-name(.)=$a]
+        for $x in $f/
                        [not(string(node-name(.))='orth')][not(string(node-name(.))='gloss')]
                        [./text() contains text 
                        {data(db:open($isi:bdd)//entry[../id=$id]//orth)}

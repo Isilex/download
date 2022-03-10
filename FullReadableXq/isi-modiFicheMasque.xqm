@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -24,7 +26,7 @@ function isilex:modifCh ($fiche,$message)
           document.getElementById(id).setAttribute(att,newff);
           &#x0007D;
       </script>
-      {db:open('scripts')//entry[./@id="headerIsiPhp"]/header/*} 
+      {db:open('scripts')//entry[./@id="headerIsiPhp"]/header
       {$isi:Css}
       
       <script>{db:open('scripts')//entry[./@id="masqueCh"]/text()}</script>
@@ -99,16 +101,16 @@ db:open("scripts","scripts.xml")/root/entry[1]/header/script[last()]/text()
          </div>
          
          {
-         (:  Génration des champs à partir de la fiche  :)
-         isi:fic_to_masque(db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry,())}
+         
+         isi:fic_to_masque(db:open($isi:bdd)
          
        </div>
      </div>
 
      <!-- XML -->
      <div id="controle">
-       { (:Génération du XML à partir de la fiche:)
-       isi:fic_to_template(db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry,())}
+       { 
+       isi:fic_to_template(db:open($isi:bdd)
      </div>
      
      <!-- Formulaire: la fiche en  XML, l ID de la fiche, la BDD de la fiche, son statut de validation à false par défaut TODO: donner le choix -->

@@ -1,3 +1,5 @@
+(:Authors: Xavier-Laurent Salvador & Sylvain Chea:)
+
 module namespace isilex = 'http://www.isilex.fr';
 import module namespace session = "http://basex.org/modules/session";
 import module namespace isi = 'http://www.isilex.fr/isi-repo';
@@ -11,7 +13,7 @@ declare
  function isilex:modiftyty($fiche,$referer,$message){
  if ($isi:testid2)
   then  
-   if (($isi:systemV='on' and db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/valid != 'ask') or $isi:systemV='off')
+   if (($isi:systemV='on' and db:open($isi:bdd)
      then
      <html>
        <head>
@@ -58,7 +60,7 @@ declare
            </div>
           {
           let $contenu := 
-            for $x in db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry 
+            for $x in db:open($isi:bdd)
             return $x
           return
             if (
@@ -90,7 +92,7 @@ declare
            class="protect"
            >
         <div id="content">{
-          for $x in db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry 
+          for $x in db:open($isi:bdd)
           return $x
         }</div>   
             
@@ -101,7 +103,7 @@ declare
                     height="40px;"
                     >
             {
-               for $x in db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry 
+               for $x in db:open($isi:bdd)
                return $x
             }
           </textarea>
@@ -165,7 +167,7 @@ declare
        {
          if (db:open('messages')//entry[matches(./subject,$fiche,'i')]) 
          then 
-           let $ort := data(for $x in db:open($isi:bdd)/*/fiche[id=$fiche or (some $or in entry/form/orth satisfies upper-case($fiche)=upper-case($or))]/entry return $x/orth)
+           let $ort := data(for $x in db:open($isi:bdd)
            return
              <div>{
                for $mess in db:open('messages')//entry[matches(./subject,$ort,'i')]
@@ -181,7 +183,7 @@ declare
    </div>
  </body>
 </html>
- (:la fiche est 'ask for validation' et le site est sur 'masterValidAdmin' On:)
+ 
  else isi:template(
    <div><h2>Page de redirection</h2>
    <p>Vous arrivez sur cette page parce qu'il semblerait que votre site utilise la Validation des données par le Master Admin et que vous avez demandé une fiche qui est en attente de validation. Il faut attendre la validation pour poursuivre le travail. <a href="/accueil">Revenir</a></p>
