@@ -40,3 +40,8 @@ IsilexLite is available under License GPL v3. By downloading IsilexLite, You agr
 - Correcting Forum ignition Bug      
 - Correcting Index Builder problem (much more quick and easy)     
  - Correcting « Next arrow » behavior when reaching end list
+ 
+ March 2022:
+ - updated for Github the web:redirect basex function
+ 
+ See http://www.projetgordes.fr for a working version
